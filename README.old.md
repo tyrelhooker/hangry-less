@@ -1,11 +1,11 @@
 # project3
 ## The Problem
 
-Do you feel exhausted after grocery meal planning and grocery shopping? Is your chronic hangry-ness or questions like "what do you want to eat tonight" causing relationship discord? It could be decision fatigue.
+Do you feel exhausted after meal planning and grocery shopping? Is your chronic hangry-ness or questions like "what do you want to eat tonight" causing relationship discord? It could be decision fatigue.
  
 "Decision fatigue is sapping us of happiness and making us regret the choices we make" - [https://www.fastcompany.com/3031364/why-having-too-many-choices-is-making-you-unhappy](https://www.fastcompany.com/3031364/why-having-too-many-choices-is-making-you-unhappy)
 
-## Folder Structure
+## Proposed Folder Structure
 ```
 project3 "root"
 .
@@ -33,7 +33,7 @@ project3 "root"
 
 ```
 
-## Branching process
+## Proposed Branching/Git Procedure
 We are building under the "shared repository model" (yes, I just learned that). It is best not "fork" to your personal repo until after the project is over (there is a fork and pull model, but this caused a lot of confusion during our last project). The shared repository model uses branching and pull Requests (found on our github.com repo page).
 
 "With a shared repository, individuals and teams are explicitly designated as contributors with read, write, or administrator access. This simple permission structure, combined with features like protected branches and Marketplace, helps teams progress quickly when they adopt GitHub." - [git handbook](https://guides.github.com/introduction/git-handbook/)
