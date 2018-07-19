@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Main from "./pages/Main";
+import Recipes from "./pages/Recipes";
+import MyPantry from "./pages/MyPantry";
+import GroceryList from "./pages/GroceryList";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Router>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/Recipes" component={Recipes} />
+            <Route exact path="/MyPantry" component={MyPantry} />
+            <Route exact path="/GroceryList" component={GroceryList} />
+          </Switch>
+        </div>
+      </Router>
+    )
   }
 }
 
