@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "title": "Orzo Italiano",
+    "ingredients": [
+      {
+        "item": "Garlic",
+        "qty": "2 cloves"
+      },
+      {
+        "item": "Lemon",
+        "qty": "1"
+      },
+      {
+        "item": "Parsley",
+        "qty": "1/4 Ounce"
+      },
+      {
+        "item": "Orzo Pasta",
+        "qty": "2/3 Cup"
+      },
+      {
+        "item": "Chicken Stock Concentrate",
+        "qty": "1"
+      },
+      {
+        "item": "Panko Breadcrumbs",
+        "qty": "1/4 Cup"
+      },
+      {
+        "item": "Baby Spinach",
+        "qty": "5 Ounces"
+      },
+      {
+        "item": "Grape Tomatoes",
+        "qty": "4 Ounces"
+      },
+      {
+        "item": "Italian Chicken Sausage",
+        "qty": "6 Ounces"
+      },
+      {
+        "item": "Italian Seasoning",
+        "qty": "1/2 Tbs"
+      },
+      {
+        "item": "Mozzarella Cheese",
+        "qty": "1/4 Cup"
+      },
+      {
+        "item": "Parmesan Cheese",
+        "qty": "1/4 Cup"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "boil water"
+      },
+      {
+        "step": 2,
+        "info": "cook pasta"
+      },
+      {
+        "step": 3,
+        "info": "prepare sauce"
+      },
+      {
+        "step": 4,
+        "info": "serve"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "Pork Chops",
+    "ingredients": [
+      {
+        "item": "pork chops",
+        "qty": "1.5 lbs"
+      },
+      {
+        "item": "asparagus",
+        "qty": "1 cup"
+      },
+      {
+        "item": "rice",
+        "qty": "1 stick"
+      },
+      {
+        "item": "pepper",
+        "qty": "1 cup"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "cook pork"
+      },
+      {
+        "step": 2,
+        "info": "cook asparagus"
+      },
+      {
+        "step": 3,
+        "info": "cook rice"
+      },
+      {
+        "step": 4,
+        "info": "serve"
+      }
+    ]
+  },
+
+  {
+    "id": 1,
+    "title": "Pumpkin Pie",
+    "ingredients": [
+      {
+        "item": "pumpkin",
+        "qty": "8 oz"
+      },
+      {
+        "item": "spices",
+        "qty": "1 tsp"
+      },
+      {
+        "item": "eggs",
+        "qty": "2"
+      },
+      {
+        "item": "pie shell",
+        "qty": "1"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "mix"
+      },
+      {
+        "step": 2,
+        "info": "prepare shell"
+      },
+      {
+        "step": 3,
+        "info": "pour mix and bake"
+      },
+      {
+        "step": 4,
+        "info": "serve"
+      }
+    ]
+  }
+]
