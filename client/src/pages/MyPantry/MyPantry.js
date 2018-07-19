@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+import { SavedRecipeCard } from "../../components/Card";
 
 class MyPantry extends Component {
   render() {
@@ -7,7 +8,8 @@ class MyPantry extends Component {
       <div>
         <Container fluid>
           <Row>
-            <Col size="s12">
+            <Col size="s4">
+              <SavedRecipeCard />
             </Col>
           </Row>
         </Container>

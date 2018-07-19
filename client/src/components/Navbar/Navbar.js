@@ -1,20 +1,35 @@
-import React from "react";
-// import "./Navbar.css";
+import React, { Component } from 'react'
+import { NavItem } from './NavItem';
 
-const Navbar = () => (
-  <div className="navbar-fixed">
-    <nav>
-      <div className="nav-wrapper">
-        <a href="/" className="brand-logo">Logo</a>
-        <ul className="right hide-on-med-and-down">
-          <li><a href="/Recipes" className="hoverable">Recipes</a></li>
-          <li><a href="/MyPantry" className="hoverable">My Pantry</a></li>
-          <li><a href="/GroceryList" className="hoverable">Grocery List</a></li>
-          <li><a href="/SingleRecipe" className="hoverable">Single Recipe</a></li>
-        </ul>
+export class Navbar extends Component {
+
+  isActive(path) {
+    return path === window.location.pathname;
+  }
+
+  isHomeActive() {
+    return window.location.pathname === "/" || window.location.pathname === "/main"
+  }
+
+  render() {
+    return (
+      <div className="navbar-fixed">
+        <nav>
+          <div className="nav-wrapper">
+            <a href="/" className="brand-logo">Logo</a>
+            <ul className="right hide-on-med-and-down">
+              <NavItem to="/Recipes" name="Recipes"  active={this.isActive("/Recipes")}/>
+              <NavItem to="/MyPantry" name="My Pantry"  active={this.isActive("/MyPantry")}/>
+              <NavItem to="/GroceryList" name="Grocery List" active={this.isActive("/GroceryList")} />
+              <NavItem to="/SingleRecipe" name="Single Recipe" active={this.isActive("/SingleRecipe")}/>
+              <NavItem to="/login" name="Login/Signup" active={this.isActive("/login")}/>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-);
+    )
+  }
+  
+}
 
 export default Navbar;

@@ -8,6 +8,14 @@ class Main extends Component {
         <Container fluid>
           <Row>
             <Col size="s12">
+              <div className="card-panel grey lighten-2">
+                {/* <div className="container"> */}
+                  <h1>Welcome Message</h1>
+                  <p>Include about information and also how to use!</p>
+                {/* </div> */}
+              </div>
+              <div className="card">
+              </div>
             </Col>
           </Row>
         </Container>

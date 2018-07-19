@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
 
 class GroceryList extends Component {
   render() {
@@ -7,8 +8,9 @@ class GroceryList extends Component {
       <div>
         <Container fluid>
           <Row>
-            <Col size="s12">
-              GroceryList Here
+            <Col size="s6">
+              <List />
+                <ListItem />
             </Col>
           </Row>
         </Container>
