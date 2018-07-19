@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 
-class Main extends Component {
+class Recipes extends Component {
   render() {
     return (
       <div>
@@ -16,4 +16,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Recipes;
