@@ -50,106 +50,244 @@
       {
         "item": "Parmesan Cheese",
         "qty": "1/4 Cup"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "I tsp"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
       }
     ],
     "directions": [
       {
         "step": 1,
-        "info": "boil water"
+        "info": "Wash and dry all produce. Preheat broiler to high. Mince garlic. Finely chop spinach until you have 1 cup very packed spinach. Halve lemon; cut one half into wedges for serving. Halve tomatoes. Pick parsley leaves from stems and finely chop; discard stems."
       },
       {
         "step": 2,
-        "info": "cook pasta"
+        "info": "Heat a drizzle of olive oil in a large, tall-sided pan over medium-high heat (use an ovenproof pan if you have one). Add 6 oz sausage to pan (about ⅔ of package; use the rest as you like). Break up meat into pieces. Cook until just browned, about 3 minutes."
       },
       {
         "step": 3,
-        "info": "prepare sauce"
+        "info": "Add tomatoes and garlic to pan with sausage. Cook, stirring occasionally, until tomatoes start to wilt, 2-3 minutes. Add ⅔ cup orzo and ½ TBSP Italian seasoning. Cook, stirring, until orzo is coated in juices, about 1 minute. Season with salt and pepper."
       },
       {
         "step": 4,
-        "info": "serve"
+        "info": "Add 2 cups water, stock concentrate, and a pinch of salt to same pan. Bring to a boil, then lower heat to medium. Let simmer, stirring occasionally, until orzo is almost al dente, 7-9 minutes. Stir in chopped spinach and cook until wilted, about 3 minutes more. TIP: If mixture seems dry, add water ¼ cup at a time until loose."
+      },
+      {
+        "step": 5,
+        "info": "Stir ¼ cup mozzarella and a squeeze of lemon into pan. Season with salt, pepper, and more lemon to taste. (TIP: If your pan is not ovenproof, transfer mixture to a baking dish at this point.) Sprinkle ¼ cup panko and Parmesan over top of orzotto. Broil until panko is golden brown, 1-3 minutes."
+      },
+      {
+        "step": 6,
+        "info": "Plate orzotto. Sprinkle parsley over top. Serve with lemon wedges on the side for squeezing over."
       }
     ]
   },
 
   {
     "id": 2,
-    "title": "Pork Chops",
+    "title": "Grilled Chipotle Chicken Legs",
     "ingredients": [
       {
-        "item": "pork chops",
-        "qty": "1.5 lbs"
+        "item": "Barbecue Sauce",
+        "qty": "1/4 Cup"
       },
       {
-        "item": "asparagus",
-        "qty": "1 cup"
+        "item": "Dijon Mustard",
+        "qty": "2 tsp"
       },
       {
-        "item": "rice",
-        "qty": "1 stick"
+        "item": "Chicken Legs",
+        "qty": "16 Ounce"
       },
       {
-        "item": "pepper",
-        "qty": "1 cup"
+        "item": "Southwest Spice Blend",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Garlic",
+        "qty": "2 Cloves"
+      },
+      {
+        "item": "Green Beans",
+        "qty": "6 Ounce"
+      },
+      {
+        "item": "White Wine Vinegar",
+        "qty": "4 tsp"
+      },      
+      {
+        "item": "Chipotle Powder",
+        "qty": "1 tps"
+      },      
+      {
+        "item": "Yukon Gold Potatoes",
+        "qty": "16 Ounce"
+      },
+      {
+        "item": "Shallot",
+        "qty": "1"
+      },
+      {
+        "item": "Cilantro",
+        "qty": "1/4 Ounce"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "4 tsp"
+      },
+      {
+        "item": "Butter",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Vegetable Oil",
+        "qty": "1 tsp"
+      },
+      {
+        "item": "Pepper"
+      },
+      {
+        "item": "Salt"
       }
     ],
     "directions": [
       {
         "step": 1,
-        "info": "cook pork"
+        "info": "Wash and dry all produce. Heat a grill for medium heat. (TIP: If cooking indoors, heat oven to 450 degrees.) In a small bowl, combine barbecue sauce, 1 tsp vinegar, 1 tsp mustard, and ¼ tsp chipotle powder (we’ll use more of the vinegar and mustard later; add a pinch more chipotle for extra heat)."
       },
       {
         "step": 2,
-        "info": "cook asparagus"
+        "info": "Pat chicken legs dry with a paper towel and rub all over with 1 tsp olive oil each. Season with plenty of salt and pepper. Add to grill and cover. Cook until no longer pink throughout, 35-40 minutes, flipping halfway through. TIP: If cooking indoors, roast chicken on a baking sheet in oven about 25 minutes."
       },
       {
         "step": 3,
-        "info": "cook rice"
+        "info": "Meanwhile, cut potatoes into ¾-inch cubes. Cut two pieces of kitchen foil, each about 12 inches long. Place potatoes on foil, adding about half to each, and sprinkle with Southwest spice, a large pinch of salt, and a drizzle of olive oil. Toss to coat. Tightly seal foil around potatoes, making two packets."
       },
       {
         "step": 4,
-        "info": "serve"
+        "info": "Place potato packets on grill and cook until tender, 25-35 minutes (or roast in oven about 35 minutes). Keep sealed until ready to serve. While chicken and potatoes cook, halve and peel shallot. Mince one half (save the rest for another use). Thinly slice garlic. Roughly chop cilantro. Heat a drizzle of olive oil in a large pan over medium-high heat. Add green beans and a large pinch of salt. Cook until just tender, about 5 minutes."
+      },
+      {
+        "step": 5,
+        "info": "Add a drizzle of vegetable oil to same pan, then toss in garlic and minced shallot. Cook until fragrant, about 30 seconds. Stir 1 TBSP vinegar and remaining mustard. Cook 30 seconds more. Remove from heat, then add 1 TBSP butter and half the cilantro, stirring to melt. Season with salt and pepper. Once chicken is cooked, increase grill heat to medium high."
+      },
+      {
+        "step": 6,
+        "info": "Brush chicken all over with half the barbecue sauce mixture. Cover and grill 2 minutes more, flipping once. (TIP: If cooking indoors, brush after 25 minutes, then roast 10 minutes more.) Remove chicken from heat and brush with rest of sauce mixture. Divide chicken, potatoes, and green beans between plates. Garnish with remaining cilantro."
       }
     ]
   },
 
   {
-    "id": 1,
-    "title": "Pumpkin Pie",
+    "id": 3,
+    "title": "Creamy Corn and Pancetta Chowder",
     "ingredients": [
       {
-        "item": "pumpkin",
-        "qty": "8 oz"
+        "item": "Yukon Gold Potatoes",
+        "qty": "24 Ounces"
       },
       {
-        "item": "spices",
-        "qty": "1 tsp"
-      },
-      {
-        "item": "eggs",
+        "item": "Scallions",
         "qty": "2"
       },
       {
-        "item": "pie shell",
+        "item": "Yellow Onion",
         "qty": "1"
+      },
+      {
+        "item": "Lime",
+        "qty": "1"
+      },
+      {
+        "item": "Flour",
+        "qty": "2 tbs"
+      },
+      {
+        "item": "Milk",
+        "qty": "13.5 Ounce"
+      },
+      {
+        "item": "Chicken Stock Concentrate",
+        "qty": "2"
+      },
+      {
+        "item": "Pancetta",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Corn",
+        "qty": "13.4 Ounce"
+      },
+      {
+        "item": "Naan Bread",
+        "qty": "4"
+      },
+      {
+        "item": "Sour Cream",
+        "qty": "8 tbs"
+      },
+      {
+        "item": "Baby Spinach",
+        "qty": "5 Ounce"
+      },
+      {
+        "item": "Dried Cranberries",
+        "qty": "2 Ounce"
+      },
+      {
+        "item": "Honey Sesame Pecans",
+        "qty": "1 Ounce"
+      },
+      {
+        "item": "Cheddar Cheese",
+        "qty": "1/2 Cup"
+      },
+      {
+        "item": "Butter",
+        "qty": "4 tbs"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "8.5 tsp"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
       }
     ],
     "directions": [
       {
         "step": 1,
-        "info": "mix"
+        "info": "Wash and dry all produce. Adjust rack to upper position and preheat oven to 450 degrees. Cut potatoes into ½-inch cubes. Halve, peel, and dice onion. Trim, then thinly slice scallions, separating greens and whites. Halve lemon."
       },
       {
         "step": 2,
-        "info": "prepare shell"
+        "info": "Melt 2 TBSP butter in a large pot over medium-high heat. Add onion and scallion whites. Cook until very soft, 4-5 minutes. Season with plenty of salt and pepper. Stir in flour and cook 1 minute. Slowly pour in milk, a little at a time, until completely incorporated."
       },
       {
         "step": 3,
-        "info": "pour mix and bake"
+        "info": "Stir potatoes, 2½ cups water, and stock concentrates into pot. Season with plenty of pepper. Bring to a boil, then lower heat and reduce to a simmer. Cook until potatoes are tender and easily pierced by a knife, about 15 minutes."
       },
       {
         "step": 4,
-        "info": "serve"
+        "info": "Meanwhile, heat a medium pan over medium-high heat. Add pancetta and cook, stirring often, until crisp, 6-7 minutes. Remove from pan and set aside on a paper-towel-lined plate to drain. Drain and rinse corn. Place naans on a baking sheet and sprinkle with a drizzle of olive oil; season with salt and pepper. Bake in oven until slightly crisp, 6-8 minutes. Cut naans in half."
+      },
+      {
+        "step": 5,
+        "info": "Once potatoes are tender, lightly mash in pot with a potato masher until chunky—some pieces should be crushed but a few whole ones should still remain. Stir in corn and allow to warm through. Remove pot from heat and let soup cool slightly. Stir in half the sour cream (2 packets). Taste and season with plenty of salt and pepper. TIP: Add a splash of water if soup is very thick."
+      },
+      {
+        "step": 6,
+        "info": "Place spinach, cranberries, and pecans in a large bowl. Add a squeeze or two of lemon and 2½ TBSP olive oil. Season with salt and pepper. Toss to combine. Divide soup between bowls and dollop with remaining sour cream. Sprinkle with cheddar, pancetta, and scallion greens. Serve with salad and naans for dipping on the side."
       }
     ]
   }
