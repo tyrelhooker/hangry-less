@@ -739,35 +739,35 @@
   },
   {
     "id": 9,
-    "title": "Chickpea-Powered Mediterranean Couscous",
-    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/5b33fe4330006c32060ff6a2-6d72ccd9.jpg",
+    "title": "Ground Beef Bulgogi Bowls",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/ground-beef-bulgogi-bowls-3f4aa304.jpg",
     "ingredients": [
       {
-        "item": "Zucchini",
+        "item": "Cucumber",
         "qty": "1"
       },
       {
-        "item": "Garlic",
-        "qty": "2 cloves"
+        "item": "Jasmine Rice",
+        "qty": "1/2 Cup"
       },
       {
         "item": "Scallions",
         "qty": "2"
       },
       {
-        "item": "Lemon",
-        "qty": "1"
+        "item": "White Wine Vinegar",
+        "qty": "5 tsp"
       },
       {
-        "item": "Israeli Couscous",
-        "qty": "3/4 Cup"
+        "item": "Shredded Carrots",
+        "qty": "4 Ounce"
       },
       {
-        "item": "Thyme",
-        "qty": "1/4 Ounce"
+        "item": "Ground Beef",
+        "qty": "10 Ounce"
       },
       {
-        "item": "Heirloom Grape Tomatoes",
+        "item": "Bulgogi Sauce",
         "qty": "4 Ounce"
       },
       {
@@ -775,23 +775,19 @@
         "qty": "1 tbs"
       },
       {
-        "item": "Chickpeas",
-        "qty": "6.7 Ounce"
+        "item": "Sour Cream",
+        "qty": "4 tbs"
       },
       {
-        "item": "Smoked Paprika",
+        "item": "Sriracha",
         "qty": "1 tps"
       },
       {
-        "item": "Vegetable Stock Concentrate",
-        "qty": "1"
+        "item": "Sugar",
+        "qty": "1/2 tsp"
       },
       {
-        "item": "Feta Cheese",
-        "qty": "1/2 cup"
-      },
-      {
-        "item": "Olive Oil",
+        "item": "Vegetable Oil",
         "qty": "2 tsp"
       },
       {
@@ -808,27 +804,27 @@
     "directions": [
       {
         "step": 1,
-        "info": "Wash and dry all produce. Adjust racks to middle and upper position and preheat oven to 425 degrees. Trim zucchini, then cut into ½-inch cubes. Halve tomatoes. Strip thyme leaves from stems. Trim, then thinly slice scallions, keeping greens and whites separate. Mince garlic. Halve lemon."
+        "info": "Wash and dry all produce. Place rice and ¾ cup water in a small pot. Cover and bring to a boil, then reduce heat to low. Simmer until tender and water is absorbed, about 15 minutes. Keep covered off heat until meal is ready. Meanwhile, trim and thinly slice scallions, separating greens and whites."
       },
       {
         "step": 2,
-        "info": "Toss zucchini, tomatoes, and half of the thyme leaves on a baking sheet with a drizzle of olive oil. Season with salt and pepper. Roast in oven on middle rack until tender, about 20 minutes, tossing halfway through."
+        "info": "Place half the vinegar, ½ tsp sugar, and a few pinches of salt in a medium bowl. Trim ends from cucumber. Using a peeler, shave cucumber lengthwise into ribbons, rotating until you get to the seedy core; discard core. Add ribbons to bowl with vinegar mixture and toss to coat. Set aside."
       },
       {
         "step": 3,
-        "info": "Meanwhile, drain and rinse chickpeas. On another baking sheet, toss chickpeas, paprika, a drizzle of olive oil, and a pinch of salt and pepper. Roast in oven on upper rack until crisp, about 20 minutes, tossing halfway. TIP: The chickpeas may pop—it’s natural."
+        "info": "Heat a drizzle of oil in a large pan over medium-high heat (use nonstick if you have it). Add carrots and cook, tossing, until tender but still a little crisp, about 1 minute. Season with salt and pepper. Transfer to a plate and set aside."
       },
       {
         "step": 4,
-        "info": "Heat 1 TBSP butter, garlic, and scallion whites in a medium pot over medium-high heat. Once butter is melted and garlic is fragrant, add couscous and remaining thyme leaves. Toss to coat. Season with salt and pepper. Cook, tossing, until couscous is lightly toasted, 2-3 minutes."
+        "info": "Heat another drizzle of oil in same pan over medium-high heat. Add scallion whites and cook until fragrant, about 30 seconds. Add beef and a pinch of salt and pepper, breaking up meat into pieces. Cook until browned, 5-7 minutes. Stir in half the sesame seeds. Pour in remaining vinegar. Cook 30 seconds, then stir in bulgogi sauce and bring to a simmer. Remove pan from heat. Season with salt and pepper."
       },
       {
         "step": 5,
-        "info": "Stir stock concentrate and 1½ cups water into pot. Bring to a boil, then lower heat and reduce to a simmer. Cook until couscous is al dente, 10-12 minutes."
+        "info": "While beef cooks, stir together sour cream and sriracha (to taste) in a small bowl. Stir in water 1 tsp at a time until mixture has a drizzling consistency. Season with salt."
       },
       {
         "step": 6,
-        "info": "Add half the veggies, half the feta cheese, and a squeeze of lemon to pot with couscous and toss to combine. Season with salt and pepper. Divide couscous mixture between plates, then top with chickpeas and remaining veggies. Sprinkle with scallion greens and remaining feta cheese."
+        "info": "Fluff rice with a fork and stir in 1 TBSP butter. Season with salt and pepper. Divide rice between bowls. Arrange beef, carrots, and cucumber on top, next to each other. (TIP: Drain any excess liquid from the cucumbers before adding.) Drizzle crema over everything. Garnish with scallion greens and remaining sesame seeds."
       }
     ]
   }
