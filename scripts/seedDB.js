@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 const recipes = require("../recipes.json");
 
-mongoose.connect("mongodb://localhost/recipelist");
+mongoose.connect("mongodb://localhost/project3recipelist");
 
 
 db.Recipe
