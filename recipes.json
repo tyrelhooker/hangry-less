@@ -293,5 +293,112 @@
         "info": "Place spinach, cranberries, and pecans in a large bowl. Add a squeeze or two of lemon and 2½ TBSP olive oil. Season with salt and pepper. Toss to combine. Divide soup between bowls and dollop with remaining sour cream. Sprinkle with cheddar, pancetta, and scallion greens. Serve with salad and naans for dipping on the side."
       }
     ]
+  },
+  {
+    "id": 4,
+    "title": "Teriyaki Chicken Stir-Fry",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/teriyaki-chicken-tenders-f2ea8fe8.jpg",
+    "ingredients": [
+      {
+        "item": "Yukon Gold Potatoes",
+        "qty": "24 Ounces"
+      },
+      {
+        "item": "Scallions",
+        "qty": "2"
+      },
+      {
+        "item": "Yellow Onion",
+        "qty": "1"
+      },
+      {
+        "item": "Lime",
+        "qty": "1"
+      },
+      {
+        "item": "Flour",
+        "qty": "2 tbs"
+      },
+      {
+        "item": "Milk",
+        "qty": "13.5 Ounce"
+      },
+      {
+        "item": "Chicken Stock Concentrate",
+        "qty": "2"
+      },
+      {
+        "item": "Pancetta",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Corn",
+        "qty": "13.4 Ounce"
+      },
+      {
+        "item": "Naan Bread",
+        "qty": "4"
+      },
+      {
+        "item": "Sour Cream",
+        "qty": "8 tbs"
+      },
+      {
+        "item": "Baby Spinach",
+        "qty": "5 Ounce"
+      },
+      {
+        "item": "Dried Cranberries",
+        "qty": "2 Ounce"
+      },
+      {
+        "item": "Honey Sesame Pecans",
+        "qty": "1 Ounce"
+      },
+      {
+        "item": "Cheddar Cheese",
+        "qty": "1/2 Cup"
+      },
+      {
+        "item": "Butter",
+        "qty": "4 tbs"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "8.5 tsp"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "Wash and dry all produce. Adjust rack to upper position and preheat oven to 450 degrees. Cut potatoes into ½-inch cubes. Halve, peel, and dice onion. Trim, then thinly slice scallions, separating greens and whites. Halve lemon."
+      },
+      {
+        "step": 2,
+        "info": "Melt 2 TBSP butter in a large pot over medium-high heat. Add onion and scallion whites. Cook until very soft, 4-5 minutes. Season with plenty of salt and pepper. Stir in flour and cook 1 minute. Slowly pour in milk, a little at a time, until completely incorporated."
+      },
+      {
+        "step": 3,
+        "info": "Stir potatoes, 2½ cups water, and stock concentrates into pot. Season with plenty of pepper. Bring to a boil, then lower heat and reduce to a simmer. Cook until potatoes are tender and easily pierced by a knife, about 15 minutes."
+      },
+      {
+        "step": 4,
+        "info": "Meanwhile, heat a medium pan over medium-high heat. Add pancetta and cook, stirring often, until crisp, 6-7 minutes. Remove from pan and set aside on a paper-towel-lined plate to drain. Drain and rinse corn. Place naans on a baking sheet and sprinkle with a drizzle of olive oil; season with salt and pepper. Bake in oven until slightly crisp, 6-8 minutes. Cut naans in half."
+      },
+      {
+        "step": 5,
+        "info": "Once potatoes are tender, lightly mash in pot with a potato masher until chunky—some pieces should be crushed but a few whole ones should still remain. Stir in corn and allow to warm through. Remove pot from heat and let soup cool slightly. Stir in half the sour cream (2 packets). Taste and season with plenty of salt and pepper. TIP: Add a splash of water if soup is very thick."
+      },
+      {
+        "step": 6,
+        "info": "Place spinach, cranberries, and pecans in a large bowl. Add a squeeze or two of lemon and 2½ TBSP olive oil. Season with salt and pepper. Toss to combine. Divide soup between bowls and dollop with remaining sour cream. Sprinkle with cheddar, pancetta, and scallion greens. Serve with salad and naans for dipping on the side."
+      }
+    ]
   }
 ]

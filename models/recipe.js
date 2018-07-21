@@ -8,7 +8,11 @@ const recipeSchema = new Schema({
   title: {type: String, required: true},
   image: {type: String, required: true},
   ingredients: [ingredientsSchema],
-  directions: [directionsSchema]
+  directions: [directionsSchema],
+  // users: [{
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: mongoose.models('User')
+  // }]
 });
 
 var Recipe = mongoose.model("Recipe", recipeSchema);
