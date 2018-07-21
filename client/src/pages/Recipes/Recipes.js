@@ -7,10 +7,10 @@ import API from "../../utils/API";
 class Recipes extends Component {
   state = {
     recipes: [],
-    title: "",
-    image: "",
-    ingredients: "",
-    directions: ""
+    // title: "",
+    // image: "",
+    // ingredients: "",
+    // directions: ""
   };
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class Recipes extends Component {
   loadRecipes = () => {
     API.getRecipes()
       .then(res =>
-        this.setState({ recipes: res.data, title: "", image: "", ingredients: "", directions: ""
+        this.setState({ recipes: res.data
         })
       )
       .catch(err => console.log(err));
@@ -35,6 +35,7 @@ class Recipes extends Component {
               {this.state.recipes.map(recipe => (
                 <RecipeCard key={recipe._id} />
               ))}
+
             </Col>
           </Row>
         </Container>
