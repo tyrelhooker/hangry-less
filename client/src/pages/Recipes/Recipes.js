@@ -33,7 +33,9 @@ class Recipes extends Component {
           <Row>
             <Col size="s4">
               {this.state.recipes.map(recipe => (
-                <RecipeCard key={recipe._id} />
+                <RecipeCard key={recipe._id} 
+                  image={recipe.image}
+                />
               ))}
             </Col>
           </Row>
