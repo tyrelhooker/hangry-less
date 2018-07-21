@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Orzo Italiano",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/5b0332f630006c14151b2422-d841beca.jpg",
     "ingredients": [
       {
         "item": "Garlic",
@@ -93,6 +94,7 @@
   {
     "id": 2,
     "title": "Grilled Chipotle Chicken Legs",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/grilled-chipotle-chicken-legs-63bc1bb1.jpg",
     "ingredients": [
       {
         "item": "Barbecue Sauce",
@@ -188,6 +190,7 @@
   {
     "id": 3,
     "title": "Creamy Corn and Pancetta Chowder",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/w32-r14-991f413b.jpg",
     "ingredients": [
       {
         "item": "Yukon Gold Potatoes",
