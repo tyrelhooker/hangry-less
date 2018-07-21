@@ -15,9 +15,6 @@ class Main extends Component {
                   <div className="row valign-wrapper">
                     <div className="col s4">
                       <img src="https://images.pexels.com/photos/833109/pexels-photo-833109.jpeg?auto=compress&cs=tinysrgb&h=350" className="circle responsive-img"/>
-                      <p>
-                        See the recipes
-                      </p>
                     </div>
                     <div className="col s4">
                       <img src="https://images.pexels.com/photos/15964/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" className="circle responsive-img"/>
