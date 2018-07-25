@@ -53,10 +53,10 @@ class Recipes extends Component {
           <Col size="s4">
             {this.state.recipes.map(recipe => (
               <RecipeCard 
-                key={recipe.id}  
+                key={recipe._id}  
                 image={recipe.image}
                 title={recipe.title}
-                dataId={recipe.id}
+                dataId={recipe._id}
                 
               />
             ))}
