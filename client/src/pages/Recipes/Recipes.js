@@ -48,7 +48,6 @@ class Recipes extends Component {
     return (
       <div>
         <Container fluid>
-        {this.state.clicked === false ? (
           <Row>
           <Col size="s4">
             {this.state.recipes.map(recipe => (
@@ -62,12 +61,6 @@ class Recipes extends Component {
             ))}
           </Col>
         </Row>
-        ) : (
-          <FullRecipe 
-            image={this.state.recipes.image}
-          />
-        )}
-
         </Container>
       </div>
     )

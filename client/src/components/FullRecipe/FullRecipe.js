@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import API from "../../utils/API";
 import {Col} from "../../components/Grid";
-
-//make this statefull? add ingridents and and instructions into the state and map over them?
+import { IngredientItem } from "./IngredientItem";
+import { DirectionItem } from "./DirectionItem";
 
 export class FullRecipe extends Component{
   state ={
@@ -35,29 +35,30 @@ export class FullRecipe extends Component{
   render(){
     return (
       <div className="container">
-        <img src={this.state.image} />
+        <img className="responsive-img" src={this.state.image} />
         <h1>{this.state.title}</h1>
         <Col size="m6">
           <div className="ingredients">
-            <h2>Ingredients:</h2>
-            <ul>
+            <h3>Ingredients:</h3>
               {this.state.ingredients.map(ingredient => (
-                <li> {ingredient.item} </li>
+                <IngredientItem
+                  key={ingredient._id}
+                  item={ingredient.item}
+                  qty={ingredient.qty}
+                />
               ))}
-            </ul>
           </div>
         </Col>
         <Col size="m6">
           <div className="Driections">
-            <h2>Directions:</h2>
-            <ul>
+            <h3>Directions:</h3>
               {this.state.directions.map(direction => (
-                <li>
-                  {direction.step}. {direction.info}
-                  <br /><br />
-                </li>
+                  <DirectionItem
+                    key={direction._id}
+                    step={direction.step}
+                    info={direction.info}
+                  />
               ))}
-            </ul>
           </div>
         </Col>
 
