@@ -6,6 +6,7 @@ import Recipes from "./pages/Recipes";
 import MyPantry from "./pages/MyPantry";
 import GroceryList from "./pages/GroceryList";
 import SignIn from "./pages/Authorization/SignIn";
+import SignUp from "./pages/Authorization/SignUp";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route exact path="/MyPantry" component={MyPantry} />
             <Route exact path="/GroceryList" component={GroceryList} />
             <Route exact path="/SignIn" component={SignIn} />
+            <Route exact path="/SignUp" component={SignUp} />
           </Switch>
         </div>
       </Router>

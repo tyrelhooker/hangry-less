@@ -118,7 +118,7 @@ to allocate the actual value in the local state object. */}
 
 const SignUpLink = () => (
   <p>
-    Don't have an account? <Link to={routes.SIGN_UP}>Sign Up</Link>
+    Don't have an account? <Link to="/SignUp">Sign Up</Link>
   </p>
 );
 
