@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import "./RecipeCard.css";
 
 export const RecipeCard = props => (
-  <div className="card">
+  <div className="card recipeCard">
     <Link to={`/ExpandedRecipe/${props.dataId}`}>
       <div className="card-image">
         <img src={props.image} />
