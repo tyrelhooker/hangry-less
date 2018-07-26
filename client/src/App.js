@@ -6,7 +6,7 @@ import Recipes from "./pages/Recipes";
 import MyPantry from "./pages/MyPantry";
 import GroceryList from "./pages/GroceryList";
 
-import Navigation from "../pages/Authorization/Navigation";
+import Navigation from "./pages/Authorization/Navigation";
 import SignUpPage from "./pages/Authorization/SignUp";
 import SignInPage from "./pages/Authorization/SignIn";
 import PasswordForgetPage from './pages/Authorization/PasswordForget';

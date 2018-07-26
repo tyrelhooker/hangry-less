@@ -32,7 +32,7 @@ const withAuthorization = authCondition => Component => {
       );
     }
   }
-  return withRouter(withAuthorization);
+  return withRouter(WithAuthorization);
 };
 
 export default withAuthorization;

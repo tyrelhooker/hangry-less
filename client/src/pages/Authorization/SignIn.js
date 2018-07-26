@@ -43,7 +43,7 @@ class SignInForm extends Component {
     auth.doSignInWithEmailAndPassword(email, password)
     .then(()=> {
       this.setState(()=> ({ ...INITIAL_STATE}));
-      history.push(routes.HOME)
+      history.push(routes.RECIPES)
       //for returning user, once sign in, will direct you to route/page from routes.js
     })
     .catch(error => {
