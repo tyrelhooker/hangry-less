@@ -21,8 +21,7 @@ export class Navbar extends Component {
               <NavItem to="/Recipes" name="Recipes"  active={this.isActive("/Recipes")}/>
               <NavItem to="/MyPantry" name="My Pantry"  active={this.isActive("/MyPantry")}/>
               <NavItem to="/GroceryList" name="Grocery List" active={this.isActive("/GroceryList")} />
-              <NavItem to="/SingleRecipe" name="Single Recipe" active={this.isActive("/SingleRecipe")}/>
-              <NavItem to="/SignIn" name="Login/Signup" active={this.isActive("/SignIn")}/>
+              <NavItem to="/login" name="Login/Signup" active={this.isActive("/login")}/>
             </ul>
           </div>
         </nav>

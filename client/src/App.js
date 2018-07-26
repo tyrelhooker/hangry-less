@@ -5,6 +5,7 @@ import Main from "./pages/Main";
 import Recipes from "./pages/Recipes";
 import MyPantry from "./pages/MyPantry";
 import GroceryList from "./pages/GroceryList";
+import {FullRecipe} from './components/FullRecipe/FullRecipe';
 
 import Navigation from "./pages/Authorization/Navigation";
 import SignUpPage from "./pages/Authorization/SignUp";

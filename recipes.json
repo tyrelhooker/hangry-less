@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Orzo Italiano",
     "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/5b0332f630006c14151b2422-d841beca.jpg",
     "ingredients": [
@@ -92,7 +91,7 @@
   },
 
   {
-    "id": 2,
+
     "title": "Grilled Chipotle Chicken Legs",
     "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/grilled-chipotle-chicken-legs-63bc1bb1.jpg",
     "ingredients": [
@@ -188,7 +187,7 @@
   },
 
   {
-    "id": 3,
+
     "title": "Creamy Corn and Pancetta Chowder",
     "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/w32-r14-991f413b.jpg",
     "ingredients": [
@@ -295,7 +294,6 @@
     ]
   },
   {
-    "id": 4,
     "title": "Teriyaki Chicken Stir-Fry",
     "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/teriyaki-chicken-tenders-f2ea8fe8.jpg",
     "ingredients": [
@@ -348,10 +346,6 @@
         "qty": "1/2 tsp"
       },
       {
-        "item": "Dried Cranberries",
-        "qty": "2 Ounce"
-      },
-      {
         "item": "Vegetable Oil",
         "qty": "4 tsp"
       },
@@ -390,6 +384,440 @@
       {
         "step": 6,
         "info": "Return chicken to pan and toss to coat. Cook until no longer pink in center, 1-2 minutes. Add a squeeze of lime to rice and fluff with a fork. Divide rice, snap peas, and chicken between plates. Drizzle with any remaining sauce. Garnish to taste with scallion greens and remaining sesame seeds (you may not use all). Serve with lime wedges."
+      }
+    ]
+  },
+  {
+    "title": "Chickpea-Powered Mediterranean Couscous",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/5b33fe4330006c32060ff6a2-6d72ccd9.jpg",
+    "ingredients": [
+      {
+        "item": "Zucchini",
+        "qty": "1"
+      },
+      {
+        "item": "Garlic",
+        "qty": "2 cloves"
+      },
+      {
+        "item": "Scallions",
+        "qty": "2"
+      },
+      {
+        "item": "Lemon",
+        "qty": "1"
+      },
+      {
+        "item": "Israeli Couscous",
+        "qty": "3/4 Cup"
+      },
+      {
+        "item": "Thyme",
+        "qty": "1/4 Ounce"
+      },
+      {
+        "item": "Heirloom Grape Tomatoes",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Sesame Seeds",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Chickpeas",
+        "qty": "6.7 Ounce"
+      },
+      {
+        "item": "Smoked Paprika",
+        "qty": "1 tps"
+      },
+      {
+        "item": "Vegetable Stock Concentrate",
+        "qty": "1"
+      },
+      {
+        "item": "Feta Cheese",
+        "qty": "1/2 cup"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "2 tsp"
+      },
+      {
+        "item": "Butter",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "Wash and dry all produce. Adjust racks to middle and upper position and preheat oven to 425 degrees. Trim zucchini, then cut into ½-inch cubes. Halve tomatoes. Strip thyme leaves from stems. Trim, then thinly slice scallions, keeping greens and whites separate. Mince garlic. Halve lemon."
+      },
+      {
+        "step": 2,
+        "info": "Toss zucchini, tomatoes, and half of the thyme leaves on a baking sheet with a drizzle of olive oil. Season with salt and pepper. Roast in oven on middle rack until tender, about 20 minutes, tossing halfway through."
+      },
+      {
+        "step": 3,
+        "info": "Meanwhile, drain and rinse chickpeas. On another baking sheet, toss chickpeas, paprika, a drizzle of olive oil, and a pinch of salt and pepper. Roast in oven on upper rack until crisp, about 20 minutes, tossing halfway. TIP: The chickpeas may pop—it’s natural."
+      },
+      {
+        "step": 4,
+        "info": "Heat 1 TBSP butter, garlic, and scallion whites in a medium pot over medium-high heat. Once butter is melted and garlic is fragrant, add couscous and remaining thyme leaves. Toss to coat. Season with salt and pepper. Cook, tossing, until couscous is lightly toasted, 2-3 minutes."
+      },
+      {
+        "step": 5,
+        "info": "Stir stock concentrate and 1½ cups water into pot. Bring to a boil, then lower heat and reduce to a simmer. Cook until couscous is al dente, 10-12 minutes."
+      },
+      {
+        "step": 6,
+        "info": "Add half the veggies, half the feta cheese, and a squeeze of lemon to pot with couscous and toss to combine. Season with salt and pepper. Divide couscous mixture between plates, then top with chickpeas and remaining veggies. Sprinkle with scallion greens and remaining feta cheese."
+      }
+    ]
+  },
+  {
+    "title": "Spinach Ricotta Ravioli",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/5b33b0b6ae08b50e363d0042-c0dc89c6.jpg",
+    "ingredients": [
+      {
+        "item": "Sweet Italian Chicken Sausage",
+        "qty": "9 Ounce"
+      },
+      {
+        "item": "Roma Tomato",
+        "qty": "1"
+      },
+      {
+        "item": "Scallions",
+        "qty": "2"
+      },
+      {
+        "item": "Lemon",
+        "qty": "1"
+      },
+      {
+        "item": "Italian Seasoning",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Spinach and Ricotta Ravioli",
+        "qty": "9 Ounce"
+      },
+      {
+        "item": "Chicken Stock Concentrate",
+        "qty": "1"
+      },
+      {
+        "item": "Sour Cream",
+        "qty": "4 tbs"
+      },
+      {
+        "item": "Vegetable Oil",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Butter",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "Wash and dry all produce. Bring a large pot of salted water to a boil. Remove sausage from casings; discard casings. Trim, then thinly slice scallions, keeping greens and whites separate. Core and seed tomato, then dice into ½-inch cubes. Cut lemon into wedges."
+      },
+      {
+        "step": 2,
+        "info": "Heat 1 TBSP oil in a large pan over medium-high heat. Add scallion whites, sausage, and Italian seasoning, breaking up meat into pieces. Cook, tossing, until sausage is browned and cooked through and scallions are softened, 3-5 minutes. Stir in tomato and cook until just softened, 1-2 minutes."
+      },
+      {
+        "step": 3,
+        "info": "Once water boils, add ravioli to pot. Cook, stirring occasionally, until al dente and floating to the top, 4-5 minutes. Scoop out and reserve ½ cup ravioli cooking water, then carefully drain. TIP: Gently shake your strainer with the drained ravioli in it to remove as much moisture as possible."
+      },
+      {
+        "step": 4,
+        "info": "Reduce heat under pan with sausage mixture to low, then add a squeeze of lemon juice, a small splash of reserved ravioli cooking water, and stock concentrate. Give everything a stir, scraping up any browned bits on bottom of pan. Stir in 1 TBSP butter and sour cream. Season with salt and pepper. TIP: Add more cooking water as needed to give sauce a loose consistency."
+      },
+      {
+        "step": 5,
+        "info": "Carefully stir ravioli into pan. Season with salt, pepper, and a squeeze or two of lemon juice (to taste)."
+      },
+      {
+        "step": 6,
+        "info": "Divide ravioli mixture between bowls, then sprinkle with scallion greens. Serve any remaining lemon on the side for squeezing over."
+      }
+    ]
+  },
+  {
+    "title": "French Onion Burgers",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/french-onion-burgers-eb8c7441.jpg",
+    "ingredients": [
+      {
+        "item": "Yellow Onion",
+        "qty": "1"
+      },
+      {
+        "item": "Kale",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Thyme",
+        "qty": "1/4 Ounce"
+      },
+      {
+        "item": "Milk",
+        "qty": "1/2 cup"
+      },
+      {
+        "item": "Flour",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Beef Stock Concentrate",
+        "qty": "1"
+      },
+      {
+        "item": "Gruyere Cheese",
+        "qty": "1/2 Cup"
+      },
+      {
+        "item": "Nutmeg",
+        "qty": "0.13 tsp"
+      },
+      {
+        "item": "Ground Beef",
+        "qty": "10 Ounce"
+      },
+      {
+        "item": "Brioche Buns",
+        "qty": "2"
+      },
+      {
+        "item": "Sugar",
+        "qty": "1 tsp"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Butter",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "Wash and dry all produce. Preheat oven to 350 degrees. Halve, peel, and thinly slice onion. Remove stems and large ribs from kale, then tear leaves into bite-sized pieces. Toss on a baking sheet with a drizzle of olive oil and a pinch of salt and pepper. Bake in oven until crisp, 10-12 minutes. TIP: Keep an eye on these—they can burn quickly."
+      },
+      {
+        "step": 2,
+        "info": "Heat a drizzle of olive oil in a large pan over medium heat. Add onion and thyme sprigs. Cook, tossing, until soft and browned, 7-8 minutes. Stir in stock concentrate, 1 tsp sugar, and ¼ cup water. Simmer until onion is jammy, 2-3 minutes. Remove and discard thyme sprigs. Remove onion from pan and set aside. Wipe out pan."
+      },
+      {
+        "step": 3,
+        "info": "Meanwhile, grate cheese on large holes of a grater. Melt 1 TBSP butter in a small pot over medium heat. Add flour and stir until lightly toasted, about 1 minute. Slowly whisk in ½ cup milk, then simmer until thickened, 1-2 minutes. Season with a pinch of nutmeg, salt, and pepper. Set aside off heat."
+      },
+      {
+        "step": 4,
+        "info": "Shape beef into two evenly sized patties (they should be slightly larger than the buns). Season all over with salt and pepper. Heat a drizzle of oil in pan used for onion over medium-high heat. Add burgers and cook until just shy of desired doneness, 3-5 minutes per side. Sprinkle cheese on top of each burger, cover pan, and cook until cheese melts, 1-2 minutes."
+      },
+      {
+        "step": 5,
+        "info": "While burgers cook, split buns half and place on a baking sheet. Toast in oven until golden, 2-3 minutes."
+      },
+      {
+        "step": 6,
+        "info": "Spread béchamel onto buns, then fill with burgers and onion. Serve with kale chips to the side."
+      }
+    ]
+  },
+  {
+    "title": "Mediterranean Baked Veggies",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/5b3aa04b30006c644d600292-1f072c43.jpg",
+    "ingredients": [
+      {
+        "item": "Asparagus",
+        "qty": "8 Ounce"
+      },
+      {
+        "item": "Garlic",
+        "qty": "2 cloves"
+      },
+      {
+        "item": "Scallions",
+        "qty": "2"
+      },
+      {
+        "item": "Grape Tomatoes",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Israeli Couscous",
+        "qty": "3/4 Cup"
+      },
+      {
+        "item": "Thyme",
+        "qty": "1/4 Ounce"
+      },
+      {
+        "item": "Sliced Almonds",
+        "qty": "1 Ounce"
+      },
+      {
+        "item": "Vegetable Stock Concentrate",
+        "qty": "2"
+      },
+      {
+        "item": "Feta Cheese",
+        "qty": "1/2 cup"
+      },
+      {
+        "item": "Olive Oil",
+        "qty": "2 tsp"
+      },
+      {
+        "item": "Butter",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "Wash and dry all produce. Adjust rack to middle position and preheat oven to 450 degrees. Mince or grate garlic. Trim and discard woody bottoms from asparagus, then cut into 3-inch pieces. Strip thyme leaves from stems. Discard stems; roughly chop leaves. Put stock concentrates and 1 cup water in a small pot and bring to a simmer."
+      },
+      {
+        "step": 2,
+        "info": "Toss garlic, asparagus, tomatoes, half the thyme, and a drizzle of olive oil on a baking sheet. Season with salt and pepper. Roast in oven until asparagus is tender and tomatoes burst, about 20 minutes, tossing halfway through."
+      },
+      {
+        "step": 3,
+        "info": "Thinly slice scallions, keeping greens and whites separate. Melt 1 TBSP butter in a medium pot over medium heat. Add scallion whites and cook, tossing, until fragrant, 1-2 minutes."
+      },
+      {
+        "step": 4,
+        "info": "Add couscous and remaining thyme to pot with scallion whites. Cook, tossing, until grains are lightly toasted, about 1 minute."
+      },
+      {
+        "step": 5,
+        "info": "Pour simmering stock into pot with couscous. Reduce heat to low, cover, and simmer until tender, 8-10 minutes."
+      },
+      {
+        "step": 6,
+        "info": "Fluff couscous with a fork. Season with salt and pepper. Divide between plates, then top with roasted veggies. Sprinkle with almonds, feta cheese, and scallion greens."
+      }
+    ]
+  },
+  {
+    "title": "Ground Beef Bulgogi Bowls",
+    "image": "https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/ground-beef-bulgogi-bowls-3f4aa304.jpg",
+    "ingredients": [
+      {
+        "item": "Cucumber",
+        "qty": "1"
+      },
+      {
+        "item": "Jasmine Rice",
+        "qty": "1/2 Cup"
+      },
+      {
+        "item": "Scallions",
+        "qty": "2"
+      },
+      {
+        "item": "White Wine Vinegar",
+        "qty": "5 tsp"
+      },
+      {
+        "item": "Shredded Carrots",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Ground Beef",
+        "qty": "10 Ounce"
+      },
+      {
+        "item": "Bulgogi Sauce",
+        "qty": "4 Ounce"
+      },
+      {
+        "item": "Sesame Seeds",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Sour Cream",
+        "qty": "4 tbs"
+      },
+      {
+        "item": "Sriracha",
+        "qty": "1 tps"
+      },
+      {
+        "item": "Sugar",
+        "qty": "1/2 tsp"
+      },
+      {
+        "item": "Vegetable Oil",
+        "qty": "2 tsp"
+      },
+      {
+        "item": "Butter",
+        "qty": "1 tbs"
+      },
+      {
+        "item": "Salt"
+      },
+      {
+        "item": "Pepper"
+      }
+    ],
+    "directions": [
+      {
+        "step": 1,
+        "info": "Wash and dry all produce. Place rice and ¾ cup water in a small pot. Cover and bring to a boil, then reduce heat to low. Simmer until tender and water is absorbed, about 15 minutes. Keep covered off heat until meal is ready. Meanwhile, trim and thinly slice scallions, separating greens and whites."
+      },
+      {
+        "step": 2,
+        "info": "Place half the vinegar, ½ tsp sugar, and a few pinches of salt in a medium bowl. Trim ends from cucumber. Using a peeler, shave cucumber lengthwise into ribbons, rotating until you get to the seedy core; discard core. Add ribbons to bowl with vinegar mixture and toss to coat. Set aside."
+      },
+      {
+        "step": 3,
+        "info": "Heat a drizzle of oil in a large pan over medium-high heat (use nonstick if you have it). Add carrots and cook, tossing, until tender but still a little crisp, about 1 minute. Season with salt and pepper. Transfer to a plate and set aside."
+      },
+      {
+        "step": 4,
+        "info": "Heat another drizzle of oil in same pan over medium-high heat. Add scallion whites and cook until fragrant, about 30 seconds. Add beef and a pinch of salt and pepper, breaking up meat into pieces. Cook until browned, 5-7 minutes. Stir in half the sesame seeds. Pour in remaining vinegar. Cook 30 seconds, then stir in bulgogi sauce and bring to a simmer. Remove pan from heat. Season with salt and pepper."
+      },
+      {
+        "step": 5,
+        "info": "While beef cooks, stir together sour cream and sriracha (to taste) in a small bowl. Stir in water 1 tsp at a time until mixture has a drizzling consistency. Season with salt."
+      },
+      {
+        "step": 6,
+        "info": "Fluff rice with a fork and stir in 1 TBSP butter. Season with salt and pepper. Divide rice between bowls. Arrange beef, carrots, and cucumber on top, next to each other. (TIP: Drain any excess liquid from the cucumbers before adding.) Drizzle crema over everything. Garnish with scallion greens and remaining sesame seeds."
       }
     ]
   }
