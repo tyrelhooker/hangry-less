@@ -4,17 +4,30 @@ import { RecipeCard } from "../../components/Card";
 // import recipes from "./recipes.json";
 import API from "../../utils/API";
 
+import withAuthorization from "../Authorization/withAuthorization";
+import { db } from "../../firebase";
+
+
 class Recipes extends Component {
-  state = {
-    recipes: [],
-    // title: "",
-    // image: "",
-    // ingredients: "",
-    // directions: ""
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      users: null,
+      recipes: [],
+      // title: "",
+      // image: "",
+      // ingredients: "",
+      // directions: ""
+    };
+  }
+
 
   componentDidMount() {
     this.loadRecipes();
+    db.onceGetUsers().then(snapshot =>
+      this.setState(() => ({ users: snapshot.val() }))
+    );
   }
 
   loadRecipes = () => {
@@ -27,6 +40,7 @@ class Recipes extends Component {
   };
 
   render() {
+    const { users } = this.state;
     return (
       <div>
         <Container fluid>
@@ -42,9 +56,22 @@ class Recipes extends Component {
             </Col>
           </Row>
         </Container>
+        { !!users && <UserList  users={users} /> }
       </div>
-    )
+    );
   }
 }
 
-export default Recipes;
+const UserList = ({ users }) =>
+  <div>
+    <h2>List of Usernames of Users</h2>
+    <p>(Saved on Sign Up in Firebase Database)</p>
+
+    {Object.keys(users).map(key =>
+      <div key={key}>{users[key].username}</div>
+    )}
+  </div>
+
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(Recipes);

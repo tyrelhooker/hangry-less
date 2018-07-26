@@ -1,29 +1,25 @@
-// REQUIRES SETTING UP - Session Handling in React with Higher Order Components section//
-
-
 import React from 'react';
 
+import AuthUserContext from './AuthUserContext';
+import { PasswordForgetForm } from './PasswordForget';
+import PasswordChangeForm from './PasswordChange';
+import withAuthorization from './withAuthorization';
+
+//Issue with this {authUser.email} after click "Account" link. 
+//Asserts that email is somehow a null value.
+
+//** use this ternary operator below when using authUser */
 const AccountPage = () =>
-  <div>
-    <h1>Account Page</h1>
-  </div>
+  <AuthUserContext.Consumer>
+    {authUser =>
+      <div>
+        <h1>Account: {authUser.email}</h1>
+        <PasswordForgetForm />
+        <PasswordChangeForm />
+      </div>
+    }
+  </AuthUserContext.Consumer>
 
-export default AccountPage;
-// import React from 'react';
+const authCondition = (authUser) => !!authUser;
 
-// import AuthUserContext from './AuthUserContext';
-// import { PasswordForgetForm } from './PasswordForget';
-// import PasswordChangeForm from './PasswordChange';
-
-// const AccountPage = () =>
-//   <AuthUserContext.Consumer>
-//     {authUser =>
-//       <div>
-//         <h1>Account: {authUser.email}</h1>
-//         <PasswordForgetForm />
-//         <PasswordChangeForm />
-//       </div>
-//     }
-//   </AuthUserContext.Consumer>
-
-// export default AccountPage;
+export default withAuthorization(authCondition)(AccountPage);
