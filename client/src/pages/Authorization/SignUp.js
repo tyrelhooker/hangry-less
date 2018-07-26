@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { auth, db } from "../../firebase";
+import API from "../../utils/API";
+import AuthUserContext from './AuthUserContext';
 
 // import { auth, db } from '../firebase';
 import * as routes from "../../constants/routes";
@@ -27,6 +29,12 @@ const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value
 });
 
+const saveNewUser = (authUser) => (
+  API.saveUser({
+    id: authUser.uid
+  })
+);
+
 //**REMEMBER This is a stateful component and will require a state */
 class SignUpForm extends Component {
   constructor(props) {
@@ -47,6 +55,10 @@ class SignUpForm extends Component {
         db.doCreateUser(authUser.user.uid, username, email)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
+            console.log(authUser.user.uid);
+            // API.saveUser({
+            //   id: authUser.uid
+            // });
             history.push(routes.RECIPES);
           })
           .catch(error => {
@@ -54,6 +66,7 @@ class SignUpForm extends Component {
           });
         this.setState(() => ({ ...INITIAL_STATE }));
         history.push(routes.RECIPES);
+
       })
       .catch(error => {
         this.setState(byPropKey("error", error));

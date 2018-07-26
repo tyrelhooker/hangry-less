@@ -7,7 +7,7 @@ export const RecipeCard = props => (
     <Link to={`/ExpandedRecipe/${props.dataId}`}>
       <div className="card-image">
         <img src={props.image} />
-        <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">+</i></a>
+        {/* <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">+</i></a> */}
       </div>
       <div className="card-content">
         <h4 className="black-text" data-id={props.dataId}>{props.title}</h4>

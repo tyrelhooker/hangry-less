@@ -11,12 +11,15 @@ import withAuthorization from './withAuthorization';
 //** use this ternary operator below when using authUser */
 const AccountPage = () =>
   <AuthUserContext.Consumer>
-    {authUser =>
+    {authUser => {
+      console.log(authUser);
+      return(
       <div>
         <h1>Account: {authUser.email}</h1>
         <PasswordForgetForm />
         <PasswordChangeForm />
       </div>
+      )}
     }
   </AuthUserContext.Consumer>
 

@@ -4,33 +4,43 @@ import { RecipeCard } from "../../components/Card";
 import { FullRecipe } from "../../components/FullRecipe/FullRecipe";
 // import recipes from "./recipes.json";
 import API from "../../utils/API";
+import AuthUserContext from '../Authorization/AuthUserContext';
 
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
 
 
 class Recipes extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      users: null,
-      recipes: [],
-      clicked: false,
-      id: ""
-      // title: "",
-      // image: "",
-      // ingredients: "",
-      // directions: ""
-    };
-  }
-
+  //   this.state = {
+  //     users: null,
+  //     recipes: [],
+  //     clicked: false,
+  //     id: ""
+  //     // title: "",
+  //     // image: "",
+  //     // ingredients: "",
+  //     // directions: ""
+  //   };
+  // }
+  state = {
+    users: null,
+    recipes: [],
+    clicked: false,
+    id: ""
+  };
 
   componentDidMount() {
     this.loadRecipes();
-    db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: snapshot.val() }))
-    );
+    // db.onceGetUsers().then(snapshot =>
+    //   this.setState(() => ({ users: snapshot.val() }))
+    // );
+        console.log(this.props);
+        API.saveUser({
+          id: this.props.authUser.uid
+        })
   }
 
   loadRecipes = () => {
@@ -41,21 +51,6 @@ class Recipes extends Component {
       )
       .catch(err => console.log(err));
   };
-
-  // handleClick = (id) => {
-  //   console.log("this is the id", id);
-  //   // this.setState({ clicked: true, id: id });
-  //   // this.handleFullLoad();
-  // }
-
-  // handleFullLoad = () => {
-  //   API.getRecipe(this.state.id)
-  //   .then(res => 
-  //     this.setState({ recipes: res.data
-  //     })
-  //   )
-  //   .catch(err => console.log(err));
-  // };
 
   render() {
     const { users } = this.state;

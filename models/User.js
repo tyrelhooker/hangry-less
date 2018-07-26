@@ -4,15 +4,13 @@ const Schema = mongoose.Schema;
 // const directionsSchema = require('./directions');
 
 const userSchema = new Schema({
-  id: {type: Number, required: true},
-  username: {type: String, required: true},
-  password: {type: String, required: true},
+  id: {type: String, required: true},
   recipes: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: mongoose.models('Recipe')
+    ref: 'Recipe'
   }]
 });
 
-var User = mongoose.model("Recipe", recipeSchema);
+var User = mongoose.model("User", userSchema);
 
 module.exports = User;
