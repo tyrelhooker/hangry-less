@@ -10,10 +10,6 @@ class Recipes extends Component {
     recipes: [],
     clicked: false,
     id: ""
-    // title: "",
-    // image: "",
-    // ingredients: "",
-    // directions: ""
   };
 
   componentDidMount() {
@@ -29,34 +25,33 @@ class Recipes extends Component {
       .catch(err => console.log(err));
   };
 
-  handleClick = (id) => {
-    console.log("this is the id", id);
-    // this.setState({ clicked: true, id: id });
-    // this.handleFullLoad();
-  }
+  // handleClick = (id) => {
+  //   console.log("this is the id", id);
+  //   // this.setState({ clicked: true, id: id });
+  //   // this.handleFullLoad();
+  // }
 
-  handleFullLoad = () => {
-    API.getRecipe(this.state.id)
-    .then(res => 
-      this.setState({ recipes: res.data
-      })
-    )
-    .catch(err => console.log(err));
-  };
+  // handleFullLoad = () => {
+  //   API.getRecipe(this.state.id)
+  //   .then(res => 
+  //     this.setState({ recipes: res.data
+  //     })
+  //   )
+  //   .catch(err => console.log(err));
+  // };
 
   render() {
     return (
       <div>
         <Container fluid>
           <Row>
-          <Col size="s4">
+          <Col size="s12 m6 l4">
             {this.state.recipes.map(recipe => (
               <RecipeCard 
                 key={recipe._id}  
                 image={recipe.image}
                 title={recipe.title}
                 dataId={recipe._id}
-                
               />
             ))}
           </Col>
