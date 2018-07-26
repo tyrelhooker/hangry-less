@@ -43,6 +43,15 @@ class SignUpForm extends Component {
     auth
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
+        // Create a user in your own accessible Firebase Database too
+        db.doCreateUser(authUser.user.uid, username, email)
+          .then(() => {
+            this.setState(() => ({ ...INITIAL_STATE }));
+            history.push(routes.HOME);
+          })
+          .catch(error => {
+            this.setState(byPropKey('error', error));
+          });
         this.setState(() => ({ ...INITIAL_STATE }));
         history.push(routes.HOME);
       })
@@ -53,8 +62,7 @@ class SignUpForm extends Component {
     event.preventDefault();
   };
 
-  //render () - implement all the input fields to capture the
-  //information in the render method of the component
+  //render () - implement all the input fields to capture the information in the render method of the component
   render() {
     const { username, email, passwordOne, passwordTwo, error } = this.state;
 
@@ -64,8 +72,7 @@ class SignUpForm extends Component {
       email === "" ||
       username === "";
 
-    //How the sign up info is being displayed and captured. Each input field gets a value
-    //from the local state and updates the value in the local state with a onChange handler
+    //How the sign up info is being displayed and captured. Each input field gets a value from the local state and updates the value in the local state with a onChange handler
     return (
       <form onSubmit={this.onSubmit}>
         <input

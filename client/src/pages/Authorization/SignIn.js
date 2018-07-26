@@ -52,8 +52,8 @@ class SignInForm extends Component {
     
     event.preventDefault();
   }
-  render() {
 
+  render() {
     const {
       email,
       password,
