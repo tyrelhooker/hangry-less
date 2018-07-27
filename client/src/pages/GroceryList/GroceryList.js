@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
+import withAuthorization from "../Authorization/withAuthorization";
 
 class GroceryList extends Component {
   render() {
@@ -19,4 +20,16 @@ class GroceryList extends Component {
   }
 }
 
-export default GroceryList;
+const UserList = ({ users }) =>
+  <div>
+    <h2>List of Usernames of Users</h2>
+    <p>(Saved on Sign Up in Firebase Database)</p>
+
+    {Object.keys(users).map(key =>
+      <div key={key}>{users[key].username}</div>
+    )}
+  </div>
+
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(GroceryList);

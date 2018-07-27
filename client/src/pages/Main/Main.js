@@ -15,13 +15,13 @@ class Main extends Component {
                   <p>Sign up now and gain access to delicious and easy recipes! Don't worry, we'll compile a complete grocery list so you only need one stop for the week.</p>
                   <div className="row valign-wrapper center-align">
                     <div className="col s4">
-                      <img src="./images/recipe.jpg" className="circle responsive-img"/>
+                      <img src="./images/recipe.jpg" className="circle responsive-img" alt=""/>
                     </div>
                     <div className="col s4">
-                      <img src="./images/jars.jpg" className="circle responsive-img"/>
+                      <img src="./images/jars.jpg" className="circle responsive-img" alt=""/>
                     </div>
                     <div className="col s4">
-                      <img src="./images/list.jpg" className="circle responsive-img"/>
+                      <img src="./images/list.jpg" className="circle responsive-img" alt=""/>
                     </div>
                   </div>
                   <div className="btn-large">Get Started</div>
