@@ -58,7 +58,7 @@ class Recipes extends Component {
       <div>
         <Container fluid>
           <Row>
-          <Col size="s12 m6 l4">
+
             {this.state.recipes.map(recipe => (
               <RecipeCard 
                 key={recipe._id}  
@@ -67,7 +67,7 @@ class Recipes extends Component {
                 dataId={recipe._id}
               />
             ))}
-          </Col>
+
         </Row>
         </Container>
         { !!users && <UserList  users={users} /> }

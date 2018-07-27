@@ -44,8 +44,8 @@ class App extends Component {
     return (
       <Router> 
           <div>            
-            <Navigation />
             <Navbar />
+            <Navigation />
             <Switch>
               <Route exact path={routes.MAIN} component={Main} />
               <Route exact path={routes.RECIPES} component={(props) => <Recipes authUser= {this.props.authUser}/>}/> 
