@@ -8,7 +8,7 @@ export const RecipeCard = props => (
     <Col size="s12 m6 l4">
       <div className="card recipeCard">
         <div className="card-image">
-          <img src={props.image} />
+          <img src={props.image} alt="" />
           {/* <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">+</i></a> */}
         </div>
         <div className="card-content">

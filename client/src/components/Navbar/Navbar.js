@@ -3,13 +3,7 @@ import { NavItem } from './NavItem';
 
 export class Navbar extends Component {
 
-  isActive(path) {
-    return path === window.location.pathname;
-  }
 
-  isHomeActive() {
-    return window.location.pathname === "/" || window.location.pathname === "/main"
-  }
 
   render() {
     return (

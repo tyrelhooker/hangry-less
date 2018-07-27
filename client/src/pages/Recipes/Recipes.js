@@ -74,6 +74,8 @@ class Recipes extends Component {
   }
 }
 
+/* 
+*/
 const UserList = ({ users }) =>
   <div>
     <h2>List of Usernames of Users</h2>
