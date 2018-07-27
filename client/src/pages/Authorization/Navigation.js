@@ -46,6 +46,7 @@ const NavigationNonAuth = (authUser) => (
       <div className="nav=wrapper">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
         <ul className="right hide-on-med-and-down">
+          <Link to="/Recipes">Recipes</Link>
           <NavItem to={routes.SIGN_IN} name="Login/Signup" />
           <SignOutButton />
         </ul>
