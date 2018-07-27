@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <Router> 
           <div>
-            <Navbar />            
+            <Navigation />           
             <Switch>
               <Route exact path={routes.MAIN} component={Main} />
               <Route exact path={routes.RECIPES} component={(props) => <Recipes authUser= {this.props.authUser}/>}/> 
@@ -56,7 +56,7 @@ class App extends Component {
               <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
               <Route exact path="/ExpandedRecipe/:id" component={FullRecipe} />
             </Switch>
-            <Navigation />
+
           </div>
       </Router>
     )

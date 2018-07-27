@@ -1,6 +1,7 @@
 // This file uses the Link component of React Router to link the application to different routes.
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavItem } from '../../components/Navbar/NavItem';
 
 // These routes are defined in your constants file.
 import AuthUserContext from './AuthUserContext';
@@ -11,6 +12,8 @@ import * as routes from "../../constants/routes";
 */
 
 //** use this ternary code when using authUser as seen below. **
+
+
 const Navigation = () =>
   <AuthUserContext.Consumer>
     {authUser => authUser
@@ -20,36 +23,35 @@ const Navigation = () =>
   </AuthUserContext.Consumer>
 
 const NavigationAuth = (authUser) => (
-  <ul>
-    <h5> {authUser.uid} </h5>
-    <h5> {authUser.email} </h5>
-    <li>
-      <Link to={routes.MAIN}>Main</Link>
-    </li>
-    <li>
-      <Link to={routes.RECIPES}>Recipes</Link>
-    </li>
-    <li>
-      <Link to={routes.ACCOUNT}>Account</Link>
-    </li>
-    <li>
-      <SignOutButton />
-    </li>
-  </ul>
+  <div className="navbar-fixed">
+    <nav>
+      <div className="nav=wrapper">
+        <a href= {routes.MAIN} className="brand-logo">Logo</a>
+        <ul className="right hide-on-med-and-down">
+          <NavItem to={routes.RECIPES} name="Recipes" />
+          <NavItem to={routes.MY_PANTRY} name="My Pantry" />
+          <NavItem to={routes.GROCERY_LIST} name="Grocery List" />
+          <NavItem to={routes.SIGN_IN} name="Login/Signup" />
+          <NavItem to={routes.ACCOUNT} name="Account" />
+          <SignOutButton />
+        </ul>
+      </div>
+    </nav>
+  </div>
 );
 
 const NavigationNonAuth = (authUser) => (
-  <ul>
-    <li>
-      <Link to={routes.MAIN}>Main</Link>
-    </li>
-    <li>
-      <Link to={routes.SIGN_IN}>Sign In</Link>
-    </li>
-    <li>
-      <Link to={routes.RECIPES}>Recipes</Link>
-    </li>
-  </ul>
+  <div className="navbar-fixed">
+    <nav>
+      <div className="nav=wrapper">
+        <a href= {routes.MAIN} className="brand-logo">Logo</a>
+        <ul className="right hide-on-med-and-down">
+          <NavItem to={routes.SIGN_IN} name="Login/Signup" />
+          <SignOutButton />
+        </ul>
+      </div>
+    </nav>
+  </div>
 );
 
 export default Navigation;
