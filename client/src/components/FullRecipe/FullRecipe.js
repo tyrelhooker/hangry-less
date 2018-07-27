@@ -35,7 +35,7 @@ export class FullRecipe extends Component{
   render(){
     return (
       <div className="container">
-        <img className="responsive-img" src={this.state.image} />
+        <img className="responsive-img" src={this.state.image} alt="" />
         <h1>{this.state.title}</h1>
         <Col size="m6">
           <div className="ingredients">
