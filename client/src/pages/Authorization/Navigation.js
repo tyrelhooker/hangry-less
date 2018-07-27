@@ -28,11 +28,19 @@ const NavigationAuth = (authUser) => (
       <div className="nav=wrapper">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
         <ul className="right hide-on-med-and-down">
-          <NavItem to={routes.RECIPES} name="Recipes" />
+          {/* <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />
           <NavItem to={routes.GROCERY_LIST} name="Grocery List" />
           <NavItem to={routes.SIGN_IN} name="Login/Signup" />
-          <NavItem to={routes.ACCOUNT} name="Account" />
+          <NavItem to={routes.ACCOUNT} name="Account" /> */}
+          
+
+          <Link to={routes.RECIPES} name="Recipes">Recipes </Link>
+          <Link to={routes.MY_PANTRY} name="My Pantry">My Pantry</Link>
+          <Link to={routes.GROCERY_LIST} name="Grocery List">Grocery List</Link>
+          <Link to={routes.SIGN_IN} name="Login/Signup">Login/Signup</Link>
+          <Link to={routes.ACCOUNT} name="Account">Account </Link>
+
           <SignOutButton />
         </ul>
       </div>
@@ -46,9 +54,18 @@ const NavigationNonAuth = (authUser) => (
       <div className="nav=wrapper">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
         <ul className="right hide-on-med-and-down">
-          <Link to="/Recipes">Recipes</Link>
-          <NavItem to={routes.SIGN_IN} name="Login/Signup" />
-          <SignOutButton />
+          {/* <NavItem to={routes.RECIPES} name="Recipes" />
+          <NavItem to={routes.MY_PANTRY} name="My Pantry" />
+          <NavItem to={routes.GROCERY_LIST} name="Grocery List" /> */}
+          {/* <NavItem to={routes.SIGN_IN} name="Login/Signup" />
+          <NavItem to={routes.ACCOUNT} name="Account" /> */}
+
+          <Link to={routes.RECIPES} name="Recipes">Recipes </Link>
+          <Link to={routes.MY_PANTRY} name="My Pantry">My Pantry</Link>
+          <Link to={routes.GROCERY_LIST} name="Grocery List">Grocery List</Link>
+          <Link to={routes.SIGN_IN} name="Login/Signup">Login/Signup</Link>
+          <Link to={routes.ACCOUNT} name="Account">Account </Link>
+          {/* <SignOutButton /> */}
         </ul>
       </div>
     </nav>
