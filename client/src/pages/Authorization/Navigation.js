@@ -21,8 +21,8 @@ const Navigation = () =>
 
 const NavigationAuth = (authUser) => (
   <ul>
-    <h1> {authUser.uid} </h1>
-    <h1> {authUser.email} </h1>
+    <h5> {authUser.uid} </h5>
+    <h5> {authUser.email} </h5>
     <li>
       <Link to={routes.MAIN}>Main</Link>
     </li>
