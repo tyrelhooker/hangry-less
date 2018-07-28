@@ -39,7 +39,8 @@ class Recipes extends Component {
     // );
         console.log(this.props);
         API.saveUser({
-          id: this.props.authUser.uid
+          firebaseid: this.props.authUser.uid,
+          email: this.props.authUser.email
         })
   }
 

@@ -22,12 +22,15 @@ const Navigation = () =>
     }
   </AuthUserContext.Consumer>
 
+//Renders routes req login
 const NavigationAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
       <div className="nav-wrapper">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
+        
         <ul className="right hide-on-med-and-down">
+          <li>{authUser.email} </li>
           <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />
           <NavItem to={routes.GROCERY_LIST} name="Grocery List" />
@@ -39,11 +42,13 @@ const NavigationAuth = (authUser) => (
   </div>
 );
 
+//Renders routes not req login
 const NavigationNonAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
       <div className="nav-wrapper">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
+        
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />

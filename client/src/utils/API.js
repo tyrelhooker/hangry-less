@@ -16,8 +16,9 @@ export default {
   deleteRecipe: function(id) {
     return axios.delete("/api/recipes/" + id);
   },
-  //Save a recipe by firebase id
-  saveUser: function(id) {
-    return axios.post("/api/users/", id);
+  //Save a user by firebase id
+  saveUser: function(firebaseid) {
+    console.log({firebaseid});
+    return axios.post("/api/users/", firebaseid);
   }
 }

@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 // const directionsSchema = require('./directions');
 
 const userSchema = new Schema({
-  id: {type: String, required: true},
+  firebaseid: {type: String, required: true},
+  email: {type: String, required: true},
   recipes: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Recipe'
