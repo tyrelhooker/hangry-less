@@ -47,16 +47,8 @@ class Recipes extends Component {
           });
         }
       })
-      .catch(err => {
-        if(err.response.status===422){
-          console.log('Do stuff here')
-          API.saveUser({
-            firebaseId: this.props.authUser.uid
-          });
-        }
-        else{
-          console.log(err);
-        }}
+      .catch(err =>
+        console.log(err)
       );
   }
 
