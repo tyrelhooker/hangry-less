@@ -37,10 +37,27 @@ class Recipes extends Component {
     // db.onceGetUsers().then(snapshot =>
     //   this.setState(() => ({ users: snapshot.val() }))
     // );
-        console.log(this.props);
-        API.saveUser({
-          id: this.props.authUser.uid
-        })
+      console.log(this.props.authUser.uid);
+      API.getUser( this.props.authUser.uid)
+      .then(res => {
+        console.log(res.data)
+        if (res.data === null) {
+          API.saveUser({
+            firebaseId: this.props.authUser.uid
+          });
+        }
+      })
+      .catch(err => {
+        if(err.response.status===422){
+          console.log('Do stuff here')
+          API.saveUser({
+            firebaseId: this.props.authUser.uid
+          });
+        }
+        else{
+          console.log(err);
+        }}
+      );
   }
 
   loadRecipes = () => {

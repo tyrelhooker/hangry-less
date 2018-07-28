@@ -29,12 +29,6 @@ const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value
 });
 
-const saveNewUser = (authUser) => (
-  API.saveUser({
-    id: authUser.uid
-  })
-);
-
 //**REMEMBER This is a stateful component and will require a state */
 class SignUpForm extends Component {
   constructor(props) {
