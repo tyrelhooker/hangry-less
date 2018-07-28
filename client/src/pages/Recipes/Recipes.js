@@ -37,18 +37,6 @@ class Recipes extends Component {
     // db.onceGetUsers().then(snapshot =>
     //   this.setState(() => ({ users: snapshot.val() }))
     // );
-<<<<<<< HEAD
-        console.log(this.props);
-        API.saveUser({
-          firebaseid: this.props.authUser.uid,
-          email: this.props.authUser.email
-        })
-||||||| merged common ancestors
-        console.log(this.props);
-        API.saveUser({
-          id: this.props.authUser.uid
-        })
-=======
       console.log(this.props.authUser.uid);
       API.getUser( this.props.authUser.uid)
       .then(res => {
@@ -70,7 +58,6 @@ class Recipes extends Component {
           console.log(err);
         }}
       );
->>>>>>> 782e6cab405b961dfbf587691498860e6f41ec75
   }
 
   loadRecipes = () => {
