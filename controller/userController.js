@@ -20,9 +20,9 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    
     db.User
-      .findOneAndUpdate({email: req.params.email}, req.body, {upsert: true}) 
+      .findOneAndUpdate({firebaseid: req.params.firebaseid}, req.body, {upsert: true})
+      console.log(req.body)
       .then(dbModel => 
         console.log(dbModel),
         res.json(dbModel))
