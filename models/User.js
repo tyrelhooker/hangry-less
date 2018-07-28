@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // const directionsSchema = require('./directions');
 
 const userSchema = new Schema({
-  id: {type: String, required: true},
+  firebaseId: {type: String, required: true},
   recipes: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Recipe'

@@ -25,7 +25,7 @@ const Navigation = () =>
 const NavigationAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper green">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
@@ -42,7 +42,7 @@ const NavigationAuth = (authUser) => (
 const NavigationNonAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper green">
         <a href= {routes.MAIN} className="brand-logo">Logo</a>
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
