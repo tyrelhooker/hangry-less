@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import {Col} from "../../components/Grid";
 import { IngredientItem } from "./IngredientItem";
 import { DirectionItem } from "./DirectionItem";
+import { Btn } from "../Btn";
 
 export class FullRecipe extends Component{
   state ={
@@ -32,12 +33,17 @@ export class FullRecipe extends Component{
       .catch(err => console.log(err))
   };
 
+  handleSave = () => {
+    console.log("hello");
+  }
+
   render(){
     return (
       <div className="container">
         <img className="responsive-img" src={this.state.image} alt="" />
         <h1>{this.state.title}</h1>
         <Col size="m6">
+          <Btn onclick={this.handleSave}>Save to MyPantry</Btn>
           <div className="ingredients">
             <h3>Ingredients:</h3>
               {this.state.ingredients.map(ingredient => (
