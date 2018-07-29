@@ -27,7 +27,7 @@ const NavigationAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
       <div className="nav-wrapper green">
-        <a href= {routes.MAIN} className="brand-logo pulse"><img src="./images/logo6.png" className="responsive-img" alt=""/></a>
+        <a href= {routes.MAIN} className="brand-logo pulse"><img src="./images/logo11.png" className="responsive-img" alt=""/></a>
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />
@@ -44,7 +44,7 @@ const NavigationNonAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
       <div className="nav-wrapper green">
-        <a href= {routes.MAIN} className="brand-logo"><img src="./images/logo6.png" className="responsive-img" alt=""/></a>
+        <a href= {routes.MAIN} className="brand-logo"><img src="./images/logo11.png" className="responsive-img" alt=""/></a>
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />
