@@ -8,6 +8,7 @@ import AuthUserContext from '../Authorization/AuthUserContext';
 
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
+import "./Recipes.css";
 
 
 class Recipes extends Component {
@@ -65,8 +66,8 @@ class Recipes extends Component {
     const { users } = this.state;
     return (
       <div>
-        <Container fluid>
-          <Row>
+        <Container fluid uniqueClassName="recipeContainer">
+          <Row >
             {this.state.recipes.map(recipe => (
               <RecipeCard 
                 key={recipe._id}  
