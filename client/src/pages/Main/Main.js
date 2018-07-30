@@ -10,9 +10,9 @@ class Main extends Component {
           <Row>
             <Col size="s12">
               <div className="card-panel mainCard lighten-2">
-                  <h1>Become Hangry-less now!</h1>
-                  <p>Hangry is a real problem. And it can lead to some pretty horrible decision making when there isn't a good plan in place. Hangry-less is a meal planning app that will help you find, prepare, and cook easy recipes so no one's asking the dreded "What should I eat for dinner?" question.</p>
-                  <p>Sign up now and gain access to delicious and easy recipes! Don't worry, we'll compile a complete grocery list so you only need one stop for the week.</p>
+                  <h1>Become Hangry-less Now!</h1>
+                  <p>Hangry is a real problem. And it can lead to some pretty horrible decision making when there isn't a good plan in place. Hangry-less is a meal planning app that will help you find, prepare, and cook easy recipes. We take the "micro-decisions" out of meal planning so no one's asking the dreaded question: "What should I eat for dinner?"</p>
+                  <p>Sign up now and gain access to delicious and easy recipes! Don't worry, we'll even compile a complete grocery list for you so you only need to make one stop for the week!</p>
                   <div className="row valign-wrapper center-align">
                     <div className="col s4">
                       <img src="./images/recipe.jpg" className="circle responsive-img" alt=""/>

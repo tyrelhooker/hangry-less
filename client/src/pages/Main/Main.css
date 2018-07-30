@@ -14,8 +14,17 @@
   text-align: center;
   /* color: #003469; */
   color: #132C14;
+  font-family: 'Oleo Script Swash Caps', cursive;
 }
 
 .mainCard p {
-  color: #09160A;
+  color: #1C421E;
+  /* color: #265728; */
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 18px;
+}
+
+.specialFont {
+  font-family: 'Oleo Script Swash Caps', cursive;
 }

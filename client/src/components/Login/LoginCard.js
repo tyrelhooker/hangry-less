@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Container } from "../../components/Grid"
+import "../../pages/Authorization/SignIn.css";
 
 export const LoginCard = ({ children }) => (
   <Container fluid uniqueClassName="loginContainer">

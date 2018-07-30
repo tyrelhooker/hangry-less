@@ -8,11 +8,14 @@
 }
 
 .card-content h4 {
-  font-size: 24px;
+  font-size: 26px;
   height: 40px;
   text-align: center;
 }
 
 .recipe-title {
   color: #132C14;
+  /* color: #265728; */
+  font-family: 'Oleo Script Swash Caps', cursive;
+  /* font-family: 'Montserrat', sans-serif; */
 }
