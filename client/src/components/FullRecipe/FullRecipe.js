@@ -14,12 +14,32 @@ export class FullRecipe extends Component{
     image: "",
     ingredients: [],
     directions: [],
-    id: this.props.match.params.id
+    id: this.props.match.params.id,
+    savedRecipes: [],
+    saved: false
   }
 
   componentDidMount() {
     this.loadRecipe();
+    this.checkForSaved();
   };
+
+  checkForSaved = () => {
+    const user= firebase.auth().currentUser.uid;
+    API.getUser(user)
+    .then(res => 
+      this.setState({ savedRecipes: res.data.recipes }))
+    .then(this.loopForSaved())
+    .catch(err => console.log(err));
+  }
+
+  loopForSaved = () => {
+    for (let i=0; i<this.state.savedRecipes; i++) {
+      if (this.state.savedRecipes[i] === this.props.match.params.id) {
+        this.setState.saved = true
+      }
+    }
+  }
 
   loadRecipe = () => {
     console.log(this.state.id);
@@ -32,7 +52,7 @@ export class FullRecipe extends Component{
           image: res.data.image
         })
       )
-      .catch(err => console.log(err))
+    .catch(err => console.log(err))
   };
 
   handleSave = () => {
@@ -41,6 +61,11 @@ export class FullRecipe extends Component{
     API.saveRecipe(user, this.props.match.params.id)
       .then(res => console.log(res))
       .catch(err => console.log(err));
+    this.setState.saved = true;
+  };
+
+  handleDelete = () => {
+    console.log("hello delete button")
   };
 
   render(){
@@ -49,7 +74,11 @@ export class FullRecipe extends Component{
         <img className="responsive-img" src={this.state.image} alt="" />
         <h1>{this.state.title}</h1>
         <Col size="m6">
+        {this.state.saved ? (
+          <Btn onClick={this.handleDelete}>Delete From MyPantry</Btn>
+        ):(
           <Btn onClick={this.handleSave}>Save to MyPantry</Btn>
+        )}
           <div className="ingredients">
             <h3>Ingredients:</h3>
               {this.state.ingredients.map(ingredient => (
