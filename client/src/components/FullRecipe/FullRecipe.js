@@ -4,6 +4,9 @@ import {Col} from "../../components/Grid";
 import { IngredientItem } from "./IngredientItem";
 import { DirectionItem } from "./DirectionItem";
 import { Btn } from "../Btn";
+import firebase from 'firebase/app';
+
+// console.log(firebase.auth().currentUser);
 
 export class FullRecipe extends Component{
   state ={
@@ -19,7 +22,6 @@ export class FullRecipe extends Component{
   };
 
   loadRecipe = () => {
-    console.log("hi");
     console.log(this.state.id);
     API.getRecipe(this.props.match.params.id)
       .then(res =>
@@ -35,7 +37,11 @@ export class FullRecipe extends Component{
 
   handleSave = () => {
     console.log("hello");
-  }
+    const user= firebase.auth().currentUser.uid;
+    API.saveRecipe(user, this.props.match.params.id)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  };
 
   render(){
     return (
@@ -43,7 +49,7 @@ export class FullRecipe extends Component{
         <img className="responsive-img" src={this.state.image} alt="" />
         <h1>{this.state.title}</h1>
         <Col size="m6">
-          <Btn onclick={this.handleSave}>Save to MyPantry</Btn>
+          <Btn onClick={this.handleSave}>Save to MyPantry</Btn>
           <div className="ingredients">
             <h3>Ingredients:</h3>
               {this.state.ingredients.map(ingredient => (
