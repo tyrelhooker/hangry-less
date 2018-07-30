@@ -9,14 +9,12 @@ import * as routes from "../../constants/routes";
 import "./SignIn.css";
 
 const SignInPage = ({history}) =>
-  <div>
     <LoginCard>
       <h1>Sign In</h1>
       <SignInForm history={history} />
       <PasswordForgetLink />
       <SignUpLink/>
     </LoginCard>
-  </div>
   const byPropKey = (propertyName, value) => () => ({
     [propertyName]: value,
 });

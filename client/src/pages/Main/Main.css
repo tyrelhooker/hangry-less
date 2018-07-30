@@ -1,0 +1,15 @@
+.mainCard {
+  background: rgb(255, 237, 227);
+}
+
+.start-button {
+  text-align: center;
+}
+
+.btn-large {
+  background: #4caf50;
+}
+
+.mainCard h1 {
+  text-align: center;
+}
