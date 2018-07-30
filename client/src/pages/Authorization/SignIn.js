@@ -65,7 +65,7 @@ class SignInForm extends Component {
     password === "" || email === "";
     
     return (
-      <form size="s6" onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit}>
         <input
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}

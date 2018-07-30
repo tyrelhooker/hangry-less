@@ -25,7 +25,7 @@ class Main extends Component {
                     </div>
                   </div>
                   <div className="start-button">
-                    <div className="btn-large lighten-2">Get Started</div>
+                    <div className="btn-large">Get Started</div>
                   </div>
               </div>
             </Col>

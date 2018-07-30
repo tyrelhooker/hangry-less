@@ -1,5 +1,5 @@
 .mainCard {
-  background: rgb(255, 237, 227);
+  background: #F8F9FA;
 }
 
 .start-button {
@@ -7,9 +7,15 @@
 }
 
 .btn-large {
-  background: #4caf50;
+  background: #ef5a5c;
 }
 
 .mainCard h1 {
   text-align: center;
+  /* color: #003469; */
+  color: #132C14;
+}
+
+.mainCard p {
+  color: #09160A;
 }
