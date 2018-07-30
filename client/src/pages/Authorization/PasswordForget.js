@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { auth } from '../../firebase';
+import { LoginCard } from "../../components/Login";
 
 /*
 The password forget uses a form to submit the information (only email address) which is needed by the Firebase authentication API to reset the password. A class method (onSubmit) makes sure that the information is sent to the API. Furthermore, it resets the form’s input field on a successful request or shows an error on an erroneous request. In addition, the form is validated as well before it can be submitted.
@@ -9,8 +10,10 @@ The password forget uses a form to submit the information (only email address) w
 
 const PasswordForgetPage = () =>
   <div>
-    <h1>PasswordForget</h1>
-    <PasswordForgetForm />
+    <LoginCard>
+      <h1>Forgot your Password?</h1>
+      <PasswordForgetForm />
+    </LoginCard>
   </div>
 
 const byPropKey = (propertyName, value) => () => ({

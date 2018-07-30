@@ -8,6 +8,11 @@
 }
 
 .card-content h4 {
-  font-size: 20px;
+  font-size: 24px;
   height: 40px;
+  text-align: center;
+}
+
+.recipe-title {
+  color: #132C14;
 }

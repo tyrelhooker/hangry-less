@@ -7,6 +7,7 @@ import { NavItem } from '../../components/Navbar/NavItem';
 import AuthUserContext from './AuthUserContext';
 import SignOutButton from "./SignOut";
 import * as routes from "../../constants/routes";
+import "./Navigation.css";
 
 /* Overall, this component is making the Navigation component aware of the user's authentication status. More specifically, Inside of the Consumer component, you are using a function instead of other components.That’s called the render props pattern in React. What’s important is that it gives you access to the value which was passed before to the Provider pattern. Once the authenticated user in the withAuthentication higher order component changes, it changes as well as the passed value in the Provider component, and then also in the Consumer component. You don’t need to pass the authenticated user down from the App component anymore. It is passed through it implicitly by using React’s context.
 */
@@ -26,7 +27,7 @@ const NavigationAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
       <div className="nav-wrapper green">
-        <a href= {routes.MAIN} className="brand-logo"><img src="./images/logo6.png" className="responsive-img" alt=""/></a>
+        <a href= {routes.MAIN} className="brand-logo pulse"><img src="./images/logo13.png" className="responsive-img" alt=""/></a>
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />
@@ -43,7 +44,7 @@ const NavigationNonAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
       <div className="nav-wrapper green">
-        <a href= {routes.MAIN} className="brand-logo"><img src="./images/logo6.png" className="responsive-img" alt=""/></a>
+        <a href= {routes.MAIN} className="brand-logo"><img src="./images/logo13.png" className="responsive-img" alt=""/></a>
         <ul className="right hide-on-med-and-down">
           <NavItem to={routes.RECIPES} name="Recipes" />
           <NavItem to={routes.MY_PANTRY} name="My Pantry" />

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+import "./Main.css";
 
 class Main extends Component {
   render() {
@@ -8,8 +9,7 @@ class Main extends Component {
         <Container fluid>
           <Row>
             <Col size="s12">
-              <div className="card-panel grey lighten-2">
-                {/* <div className="container"> */}
+              <div className="card-panel mainCard lighten-2">
                   <h1>Become Hangry-less now!</h1>
                   <p>Hangry is a real problem. And it can lead to some pretty horrible decision making when there isn't a good plan in place. Hangry-less is a meal planning app that will help you find, prepare, and cook easy recipes so no one's asking the dreded "What should I eat for dinner?" question.</p>
                   <p>Sign up now and gain access to delicious and easy recipes! Don't worry, we'll compile a complete grocery list so you only need one stop for the week.</p>
@@ -24,10 +24,9 @@ class Main extends Component {
                       <img src="./images/list.jpg" className="circle responsive-img" alt=""/>
                     </div>
                   </div>
-                  <div className="btn-large">Get Started</div>
-                {/* </div> */}
-              </div>
-              <div className="card">
+                  <div className="start-button">
+                    <div className="btn-large">Get Started</div>
+                  </div>
               </div>
             </Col>
           </Row>

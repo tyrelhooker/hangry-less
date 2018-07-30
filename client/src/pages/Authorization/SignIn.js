@@ -4,18 +4,19 @@ import { withRouter } from "react-router-dom";
 import { SignUpLink } from "./SignUp";
 import { PasswordForgetLink } from './PasswordForget';
 import { auth } from "../../firebase";
+import { LoginCard } from "../../components/Login";
 import * as routes from "../../constants/routes";
+import "./SignIn.css";
 
 const SignInPage = ({history}) =>
-  <div>
-    <h1>SignIn Page</h1>
-    <SignInForm history={history} />
-    <PasswordForgetLink />
-    <SignUpLink/>
-  </div>
-
-const byPropKey = (propertyName, value) => () => ({
-  [propertyName]: value,
+    <LoginCard>
+      <h1>Sign In</h1>
+      <SignInForm history={history} />
+      <PasswordForgetLink />
+      <SignUpLink/>
+    </LoginCard>
+  const byPropKey = (propertyName, value) => () => ({
+    [propertyName]: value,
 });
 
 const INITIAL_STATE = {
