@@ -4,18 +4,19 @@ import { withRouter } from "react-router-dom";
 import { SignUpLink } from "./SignUp";
 import { PasswordForgetLink } from './PasswordForget';
 import { auth } from "../../firebase";
+import { LoginCard } from "../../components/Login";
 import * as routes from "../../constants/routes";
+import "./SignIn.css";
 
 const SignInPage = ({history}) =>
-  <div>
-    <h1>SignIn Page</h1>
-    <SignInForm history={history} />
-    <PasswordForgetLink />
-    <SignUpLink/>
-  </div>
-
-const byPropKey = (propertyName, value) => () => ({
-  [propertyName]: value,
+    <LoginCard>
+      <h1>Sign In</h1>
+      <SignInForm history={history} />
+      <PasswordForgetLink />
+      <SignUpLink/>
+    </LoginCard>
+  const byPropKey = (propertyName, value) => () => ({
+    [propertyName]: value,
 });
 
 const INITIAL_STATE = {
@@ -65,24 +66,25 @@ class SignInForm extends Component {
     
     return (
       <form onSubmit={this.onSubmit}>
-        <input
-          value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={password}
-          onChange={event => this.setState(byPropKey('password', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign In
-        </button>
-  
-      { error && <p>{error.message}</p>}
-      {/* place an alert here instead of displaying text to the page */}
+        <div className="input-field">
+          <input
+            value={email}
+            onChange={event => this.setState(byPropKey('email', event.target.value))}
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            value={password}
+            onChange={event => this.setState(byPropKey('password', event.target.value))}
+            type="password"
+            placeholder="Password"
+          />
+          <button disabled={isInvalid} type="submit">
+            Sign In
+          </button>
+        </div>
+        { error && <p>{error.message}</p>}
+        {/* place an alert here instead of displaying text to the page */}
     
       </form>
     )

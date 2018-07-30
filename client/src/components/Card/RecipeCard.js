@@ -12,7 +12,7 @@ export const RecipeCard = props => (
           {/* <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">+</i></a> */}
         </div>
         <div className="card-content">
-          <h4 className="black-text" data-id={props.dataId}>{props.title}</h4>
+          <h4 className="recipe-title" data-id={props.dataId}>{props.title}</h4>
         </div>
       </ div>
     </Col>

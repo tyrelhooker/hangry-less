@@ -1,0 +1,30 @@
+.mainCard {
+  background: #F8F9FA;
+}
+
+.start-button {
+  text-align: center;
+}
+
+.btn-large {
+  background: #ef5a5c;
+}
+
+.mainCard h1 {
+  text-align: center;
+  /* color: #003469; */
+  color: #132C14;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.mainCard p {
+  color: #1C421E;
+  /* color: #265728; */
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 18px;
+}
+
+.specialFont {
+  font-family: 'Oleo Script Swash Caps', cursive;
+}

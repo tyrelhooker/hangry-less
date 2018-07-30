@@ -4,6 +4,7 @@ import AuthUserContext from './AuthUserContext';
 import { PasswordForgetForm } from './PasswordForget';
 import PasswordChangeForm from './PasswordChange';
 import withAuthorization from './withAuthorization';
+import { LoginCard } from "../../components/Login";
 
 //Issue with this {authUser.email} after click "Account" link. 
 //Asserts that email is somehow a null value.
@@ -13,12 +14,14 @@ const AccountPage = () =>
   <AuthUserContext.Consumer>
     {authUser => {
       console.log(authUser);
-      return(
-      <div>
-        <h1>Account: {authUser.email}</h1>
-        <PasswordForgetForm />
-        <PasswordChangeForm />
-      </div>
+      return (
+        <LoginCard>
+          <h1>Account: </h1>
+          <h5>{authUser.email}</h5>
+          <h4>Forgot Password?</h4>
+            <PasswordForgetForm />
+          <PasswordChangeForm />
+        </LoginCard>
       )}
     }
   </AuthUserContext.Consumer>

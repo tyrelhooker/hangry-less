@@ -3,14 +3,17 @@ import { Link, withRouter } from "react-router-dom";
 import { auth, db } from "../../firebase";
 import API from "../../utils/API";
 import AuthUserContext from './AuthUserContext';
+import { LoginCard } from "../../components/Login";
 
 // import { auth, db } from '../firebase';
 import * as routes from "../../constants/routes";
 
 const SignUpPage = ({ history }) => (
   <div>
-    <h1>SignUp</h1>
-    <SignUpForm history={history} />
+    <LoginCard>
+      <h1>Sign Up to Gain Access!</h1>
+      <SignUpForm history={history} />
+    </LoginCard>
   </div>
 );
 

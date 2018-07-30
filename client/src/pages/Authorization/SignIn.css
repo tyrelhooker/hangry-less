@@ -1,0 +1,31 @@
+body {
+  background: #f6f7f8;
+}
+
+form {
+  padding: 10px;
+  
+}
+
+.loginContainer h1 {
+  color: #132C14
+}
+
+.col {
+  height: 100%;
+}
+
+.signInCard {
+  /* border: solid tomato 2px; */
+  margin: 50px 0px;
+  height: 100%;
+  background: #F8F9FA;
+}
+
+/* label underline focus color */
+.input-field form:focus {
+  border-bottom: 2px solid #ef5a5c;
+  box-shadow: 0 2px 0 0 #ef5a5c;
+}
+
+
