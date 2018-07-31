@@ -2,6 +2,8 @@ import React from 'react';
 
 import { auth } from '../../firebase';
 
+localStorage.clear();
+
 const SignOutButton = () =>
   <button
     type="button"
