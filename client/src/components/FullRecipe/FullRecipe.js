@@ -3,7 +3,6 @@ import API from "../../utils/API";
 import {Col} from "../../components/Grid";
 import { IngredientItem } from "./IngredientItem";
 import { DirectionItem } from "./DirectionItem";
-import { Btn } from "../Btn";
 import firebase from 'firebase/app';
 
 // console.log(firebase.auth().currentUser);
@@ -58,26 +57,12 @@ export class FullRecipe extends Component{
     .catch(err => console.log(err))
   };
 
-  handleSave = () => {
-    console.log("hello");
-    const user= firebase.auth().currentUser.uid;
-    API.saveRecipe(user, this.props.match.params.id)
-      .then(alert("Recipe has been saved to your Pantry!"))
-      .catch(err => console.log(err));
-    this.setState.saved = true;
-  };
-
-  handleDelete = () => {
-    console.log("hello delete button")
-  };
-
   render(){
     return (
       <div className="container">
         <img className="responsive-img" src={this.state.image} alt="" />
         <h1>{this.state.title}</h1>
         <Col size="m6">
-          <Btn onClick={this.handleSave}>Save to MyPantry</Btn>
           <div className="ingredients">
             <h3>Ingredients:</h3>
               {this.state.ingredients.map(ingredient => (
