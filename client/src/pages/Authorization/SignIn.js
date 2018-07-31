@@ -6,6 +6,7 @@ import { PasswordForgetLink } from './PasswordForget';
 import { auth } from "../../firebase";
 import { LoginCard } from "../../components/Login";
 import * as routes from "../../constants/routes";
+import firebase from "firebase/app";
 import "./SignIn.css";
 
 const SignInPage = ({history}) =>
@@ -46,6 +47,9 @@ class SignInForm extends Component {
       this.setState(()=> ({ ...INITIAL_STATE}));
       history.push(routes.RECIPES)
       //for returning user, once sign in, will direct you to route/page from routes.js
+    })
+    .then(() => {
+      localStorage.setItem('user', firebase.auth().currentUser.uid)
     })
     .catch(error => {
       this.setState(byPropKey("error", error));

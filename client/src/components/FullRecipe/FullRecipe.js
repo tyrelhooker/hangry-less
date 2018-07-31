@@ -20,32 +20,35 @@ export class FullRecipe extends Component{
   }
 
   componentDidMount() {
+    // setTimeout(this.checkForSaved(),3000);
     this.loadRecipe();
-    this.checkForSaved();
   };
 
-  checkForSaved = () => {
-    const user= firebase.auth().currentUser.uid;
-    API.getUser(user)
-    .then(res => 
-      this.setState({ savedRecipes: res.data.recipes }))
-    .then(this.loopForSaved())
-    .catch(err => console.log(err));
-  }
+  // checkForSaved = () => {
+  //   const user= localStorage.getItem('user');
+  //   console.log(user);
+  //   API.getUser(user)
+  //   .then(res => 
+  //     // this.setState({ savedRecipes: res.data.recipes }))
+  //     console.log(res.data.recipes))
+  //   .then(this.loopForSaved())
+  //   .catch(err => console.log(err));
+  // }
 
-  loopForSaved = () => {
-    for (let i=0; i<this.state.savedRecipes; i++) {
-      if (this.state.savedRecipes[i] === this.props.match.params.id) {
-        this.setState.saved = true
-      }
-    }
-  }
+  // loopForSaved = () => {
+  //   for (let i=0; i<this.state.savedRecipes; i++) {
+  //     if (this.state.savedRecipes[i] === this.props.match.params.id) {
+  //       this.setState.saved = true
+  //     }
+  //   }
+  // }
 
   loadRecipe = () => {
     console.log(this.state.id);
     API.getRecipe(this.props.match.params.id)
       .then(res =>
         this.setState({
+          key: res.data.id,
           ingredients: res.data.ingredients,
           directions: res.data.directions,
           title: res.data.title,
@@ -59,7 +62,7 @@ export class FullRecipe extends Component{
     console.log("hello");
     const user= firebase.auth().currentUser.uid;
     API.saveRecipe(user, this.props.match.params.id)
-      .then(res => console.log(res))
+      .then(alert("Recipe has been saved to your Pantry!"))
       .catch(err => console.log(err));
     this.setState.saved = true;
   };
@@ -74,11 +77,7 @@ export class FullRecipe extends Component{
         <img className="responsive-img" src={this.state.image} alt="" />
         <h1>{this.state.title}</h1>
         <Col size="m6">
-        {this.state.saved ? (
-          <Btn onClick={this.handleDelete}>Delete From MyPantry</Btn>
-        ):(
           <Btn onClick={this.handleSave}>Save to MyPantry</Btn>
-        )}
           <div className="ingredients">
             <h3>Ingredients:</h3>
               {this.state.ingredients.map(ingredient => (

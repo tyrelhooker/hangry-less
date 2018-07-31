@@ -45,12 +45,14 @@ class Recipes extends Component {
         if (res.data === null) {
           API.saveUser({
             firebaseId: this.props.authUser.uid
-          });
+          })
+          .then(localStorage.setItem('user', this.props.authUser.uid));
         }
       })
       .catch(err =>
         console.log(err)
       );
+    console.log(localStorage.getItem('user'));
   }
 
   loadRecipes = () => {
