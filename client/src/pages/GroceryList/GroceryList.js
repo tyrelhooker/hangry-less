@@ -11,13 +11,15 @@ import { List } from "../../components/List/List";
 import { ListItem } from "../../components/List/ListItem";
 
 const user = localStorage.getItem('user');
+let allRecipes = [];
 
 class MyPantry extends Component {
   state = {
     users: null,
     recipes: [],
     clicked: false,
-    id: ""
+    id: "",
+    allRecipes: []
   };
 
   componentDidMount() {
@@ -50,8 +52,19 @@ class MyPantry extends Component {
     }));
   };
 
+  compiledList = () => {
+    this.state.recipes.map(recipe => (
+      recipe.data.ingredients.map(ingredient => (
+        allRecipes.push(ingredient)
+      ))
+    ))
+    console.log(allRecipes);
+  }
+  
+
   render() {
     console.log("test", this.state.recipes);
+    // console.log(this.compileList());
     const { users } = this.state;
     return (
       <div>
