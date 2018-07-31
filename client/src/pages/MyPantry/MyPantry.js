@@ -4,7 +4,7 @@ import { SavedRecipeCard } from "../../components/Card";
 import firebase from 'firebase/app';
 import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
-
+import { RECIPES } from '../../constants/routes';
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
 // import "./Recipes.css";
@@ -45,6 +45,7 @@ class MyPantry extends Component {
     console.log("recipe id", recipeId);
     API.deleteRecipe(user, recipeId)
     .then(alert("Recipe has been removed."))
+    .then(window.location.assign(RECIPES))
     .catch(err => console.log(err));
   }
 
@@ -56,15 +57,21 @@ class MyPantry extends Component {
         <Container fluid uniqueClassName="recipeContainer">
         <h1 className="center-align">This Week's Recipes</h1>
           <Row >
-            {this.state.recipes.map(recipe => (
-              <SavedRecipeCard
-                key={recipe.data._id}  
-                image={recipe.data.image}
-                title={recipe.data.title}
-                dataId={recipe.data._id}
-                handleDelete={() => this.handleDelete(recipe.data._id)}
-              />
-            ))}
+            {this.state.recipes.length ? (
+              <div>
+              {this.state.recipes.map(recipe => (
+                <SavedRecipeCard
+                  key={recipe.data._id}  
+                  image={recipe.data.image}
+                  title={recipe.data.title}
+                  dataId={recipe.data._id}
+                  handleDelete={() => this.handleDelete(recipe.data._id)}
+                />
+              ))}
+              </div>
+            ) : (
+              <h1 className="center-align">You haven't saved any recipes yet.</h1>
+            )}            
         </Row>
         </Container>
         { !!users && <UserList  users={users} /> }
