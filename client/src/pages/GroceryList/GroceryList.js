@@ -7,6 +7,8 @@ import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
+import { List } from "../../components/List/List";
+import { ListItem } from "../../components/List/ListItem";
 
 const user = localStorage.getItem('user');
 
@@ -54,15 +56,18 @@ class MyPantry extends Component {
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
-        <h1 className="center-align">This Week's Recipes</h1>
+        <h1 className="center-align">This Week's Grocery List</h1>
           <Row >
             {this.state.recipes.map(recipe => (
-              <RecipeCard
-                key={recipe.data._id}  
-                image={recipe.data.image}
-                title={recipe.data.title}
-                dataId={recipe.data._id}
-              />
+              <List>
+                {recipe.data.ingredients.map(ingredient => (
+                  <ListItem 
+                    key={ingredient.item}
+                    item={ingredient.item}
+                    qty={ingredient.qty}
+                  />
+                ))}
+              </List>
             ))}
         </Row>
         </Container>
