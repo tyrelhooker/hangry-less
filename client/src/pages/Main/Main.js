@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+import {Link} from "react-router-dom";
 import "./Main.css";
 
 class Main extends Component {
@@ -24,9 +25,11 @@ class Main extends Component {
                       <img src="./images/list.jpg" className="circle responsive-img" alt=""/>
                     </div>
                   </div>
-                  <div className="start-button">
-                    <div className="btn-large">Get Started</div>
-                  </div>
+                  <Link to={`/Recipes`}>
+                    <div className="start-button">
+                      <div className="btn-large center-align">Get Started</div>
+                    </div>
+                  </Link>
               </div>
             </Col>
           </Row>

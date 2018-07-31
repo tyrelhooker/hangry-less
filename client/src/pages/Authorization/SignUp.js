@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { auth, db } from "../../firebase";
-import API from "../../utils/API";
 import AuthUserContext from './AuthUserContext';
 import { LoginCard } from "../../components/Login";
 
