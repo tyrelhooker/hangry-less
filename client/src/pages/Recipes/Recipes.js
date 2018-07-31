@@ -38,6 +38,7 @@ class Recipes extends Component {
     // );
       console.log("authUser?", this.props.authUser.uid);
       localStorage.setItem('user', this.props.authUser.uid);
+      console.log("local storage", localStorage.getItem('user'));
       API.getUser(this.props.authUser.uid)
       .then(res => {
         console.log(res.data)
