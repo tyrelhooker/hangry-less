@@ -9,10 +9,10 @@ export default {
   getRecipe: function(id) {
     return axios.get("/api/recipes/" + id);
   },
-  // //Delete recipe by specific id
-  // deleteRecipe: function(id) {
-  //   return axios.delete("/api/recipes/" + id);
-  // },
+  //Delete recipe from user account by specific id
+  deleteRecipe: function(firebaseId, recipeId) {
+    return axios.post("/api/users/" + firebaseId, { $pull: {recipes: recipeId} });
+  },
   //Save a user to mongo by their firebase id
   saveUser: function(firebaseId) {
     return axios.post("/api/users/", firebaseId);

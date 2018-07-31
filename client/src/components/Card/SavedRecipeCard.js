@@ -1,14 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import {Link} from "react-router-dom";
+import { Col } from "../../components/Grid";
+import "./RecipeCard.css";
 
 export const SavedRecipeCard = props => (
-  <div className="card">
-    <div className="card-image">
-      <img src="https://cdn.pixabay.com/photo/2017/06/01/18/46/cook-2364221__340.jpg" alt=""/>
-      <span className="card-title">Recipe Title</span>
-      <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">+</i></a>
-    </div>
-    <div className="card-content">
-      <p>Link to Instructions and ingredients</p>
-    </div>
-  </ div>
+  
+  <Col size="s12 m6 l4">
+    <div className="card savedRecipeCard">
+      <div className="card-image">
+      <Link to={`/ExpandedRecipe/${props.dataId}`}>
+        <img className="recipeImage" src={props.image} alt="" />
+      </Link>
+        <div onClick={props.handleDelete} className="btn red">Delete</div>
+      </div>
+      <div className="card-content">
+        <h4 className="recipe-title" data-id={props.dataId}>{props.title}</h4>
+      </div>
+    </ div>
+  </Col>
+
 );
