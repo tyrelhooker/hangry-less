@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { RecipeCard } from "../../components/Card";
-import { FullRecipe } from "../../components/FullRecipe/FullRecipe";
 import firebase from 'firebase/app';
 import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
@@ -15,14 +14,13 @@ const user = localStorage.getItem('user');
 class MyPantry extends Component {
   state = {
     users: null,
-    recipeIds: [],
     recipes: [],
     clicked: false,
     id: ""
   };
 
   componentDidMount() {
-    console.log(user)
+    console.log("Pantry User?", user)
     API.getUser(user)
     .then(res => {
       return this.loadRecipes(res.data.recipes);
@@ -33,32 +31,14 @@ class MyPantry extends Component {
         recipes: recipes
       })
     })
-    
-    //   this.setState({ 
-    //     recipeIds: res.data.recipes})
-    //   return res.data.recipes;
-    //   // console.log(res.data)
-    // })
-    // .then(this.loadRecipes()
-    // )
-  
-
     .catch(err => console.log(err));
-    // this.loadRecipes();
   }
 
   loadRecipes = (recipes) => {
     console.log("hey there")
-    // console.log(this.state.recipeIds);
-    // for (let i=0; i<this.state.recipeIds.length; i++) {
-    //   API.getRecipe(this.state.recipeIds[i])
-    //   .then(res => 
-    //     this.setState({recipes: [...this.state.recipes, res.data]})
-    //   )
-    // }
     return Promise.all(recipes.map((recipe)=>{
       return API.getRecipe(recipe)
-    }))
+    }));
   };
 
   render() {
@@ -67,6 +47,7 @@ class MyPantry extends Component {
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
+        <h1 className="center-align">This Week's Recipes</h1>
           <Row >
             {this.state.recipes.map(recipe => (
               <RecipeCard

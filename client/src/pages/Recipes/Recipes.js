@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { RecipeCard } from "../../components/Card";
-import { FullRecipe } from "../../components/FullRecipe/FullRecipe";
-// import recipes from "./recipes.json";
 import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
 
@@ -38,8 +36,9 @@ class Recipes extends Component {
     // db.onceGetUsers().then(snapshot =>
     //   this.setState(() => ({ users: snapshot.val() }))
     // );
-      console.log(this.props.authUser.uid);
-      API.getUser( this.props.authUser.uid)
+      console.log("authUser?", this.props.authUser.uid);
+      localStorage.setItem('user', this.props.authUser.uid);
+      API.getUser(this.props.authUser.uid)
       .then(res => {
         console.log(res.data)
         if (res.data === null) {
@@ -69,6 +68,7 @@ class Recipes extends Component {
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
+        <h1 className="center-align">What's For Dinner?</h1>
           <Row >
             {this.state.recipes.map(recipe => (
               <RecipeCard 

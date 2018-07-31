@@ -5,11 +5,8 @@ import { auth } from '../../firebase';
 localStorage.clear();
 
 const SignOutButton = () =>
-  <button
-    type="button"
-    onClick={auth.doSignOut}
-  >
+  <div className="btn" onClick={auth.doSignOut}>
     Sign Out
-  </button>
+  </div>
 
 export default SignOutButton;
