@@ -2,6 +2,10 @@
   opacity: 0.5;
 }
 
+.recipeImage:hover{
+  opacity: 0.5;
+}
+
 .recipeCard {
   margin: 20px 10px;
   border: solid 1px grey;

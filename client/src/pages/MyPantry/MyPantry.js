@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
-import { RecipeCard } from "../../components/Card";
+import { SavedRecipeCard } from "../../components/Card";
 import firebase from 'firebase/app';
 import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
@@ -13,13 +13,12 @@ const user = localStorage.getItem('user');
 
 class MyPantry extends Component {
   state = {
-    users: null,
     recipes: [],
-    clicked: false,
     id: ""
   };
 
   componentDidMount() {
+    const user = localStorage.getItem('user');
     console.log("Pantry User?", user)
     API.getUser(user)
     .then(res => {
@@ -41,6 +40,14 @@ class MyPantry extends Component {
     }));
   };
 
+  handleDelete = (recipeId) => {
+    console.log("hello delete");
+    console.log("recipe id", recipeId);
+    API.deleteRecipe(user, recipeId)
+    .then(alert("Recipe has been removed."))
+    .catch(err => console.log(err));
+  }
+
   render() {
     console.log("test", this.state.recipes);
     const { users } = this.state;
@@ -50,11 +57,12 @@ class MyPantry extends Component {
         <h1 className="center-align">This Week's Recipes</h1>
           <Row >
             {this.state.recipes.map(recipe => (
-              <RecipeCard
+              <SavedRecipeCard
                 key={recipe.data._id}  
                 image={recipe.data.image}
                 title={recipe.data.title}
                 dataId={recipe.data._id}
+                handleDelete={() => this.handleDelete(recipe.data._id)}
               />
             ))}
         </Row>
