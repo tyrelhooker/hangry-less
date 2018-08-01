@@ -50,7 +50,6 @@ class SignInForm extends Component {
     })
     .then(() => {
       sessionStorage.setItem('user', firebase.auth().currentUser.uid)
-      console.log("SigninUser: ", sessionStorage.getItem('user'));
     })
     .catch(error => {
       this.setState(byPropKey("error", error));

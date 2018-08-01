@@ -11,11 +11,9 @@ module.exports = {
   },
   //gets only one user by their associated firebaseId
   findById: function(req, res) {
-    console.log(req.params.id)
     db.User
       .findOne({firebaseId: req.params.id})
       .then(dbModel => {
-        console.log(dbModel);
         return res.json(dbModel)}
       )
       .catch(err => res.status(422).json(err));

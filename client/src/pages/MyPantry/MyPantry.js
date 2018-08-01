@@ -13,7 +13,6 @@ class MyPantry extends Component {
   };
 
   componentDidMount() {
-    console.log("Pantry User?", sessionStorage.getItem('user'));
     this.getSavedRecipes();
   }
 
@@ -23,7 +22,6 @@ class MyPantry extends Component {
       return this.loadRecipes(res.data.recipes);
     })
     .then(recipes=>{
-      console.log("after load recipes", recipes);
       this.setState({
         recipes: recipes
       })
@@ -32,22 +30,18 @@ class MyPantry extends Component {
   }
 
   loadRecipes = (recipes) => {
-    console.log("hey there")
     return Promise.all(recipes.map((recipe)=>{
       return API.getRecipe(recipe)
     }));
   };
 
   handleDelete = (recipeId) => {
-    console.log("hello delete");
-    console.log("recipe id", recipeId);
     API.deleteRecipe(sessionStorage.getItem('user'), recipeId)
     .then(res => this.getSavedRecipes())
     .catch(err => console.log(err));
   }
 
   render() {
-    console.log("test", this.state.recipes);
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">

@@ -12,13 +12,11 @@ class MyPantry extends Component {
   };
 
   componentDidMount() {
-    console.log("Grocery user?!", sessionStorage.getItem('user'));
     API.getUser(sessionStorage.getItem('user'))
     .then(res => {
       return this.loadRecipes(res.data.recipes);
     })
     .then(recipes=>{
-      console.log("after load recipes", recipes);
       this.setState({
         recipes: recipes
       })
@@ -27,14 +25,12 @@ class MyPantry extends Component {
   }
 
   loadRecipes = (recipes) => {
-    console.log("hey there")
     return Promise.all(recipes.map((recipe)=>{
       return API.getRecipe(recipe)
     }));
   };
 
   render() {
-    console.log("test", this.state.recipes);
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">

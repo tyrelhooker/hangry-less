@@ -13,7 +13,6 @@ import { LoginCard } from "../../components/Login";
 const AccountPage = () =>
   <AuthUserContext.Consumer>
     {authUser => {
-      console.log(authUser);
       return (
         <LoginCard>
           <h1>Account: </h1>
