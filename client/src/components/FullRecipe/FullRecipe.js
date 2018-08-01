@@ -11,9 +11,7 @@ export class FullRecipe extends Component{
     image: "",
     ingredients: [],
     directions: [],
-    id: this.props.match.params.id,
-    savedRecipes: [],
-    saved: false
+    id: this.props.match.params.id
   }
 
   componentDidMount() {
@@ -21,7 +19,6 @@ export class FullRecipe extends Component{
   };
 
   loadRecipe = () => {
-    console.log(this.state.id);
     API.getRecipe(this.props.match.params.id)
       .then(res =>
         this.setState({

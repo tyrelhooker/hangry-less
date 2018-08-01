@@ -1,3 +1,4 @@
+//Page that renders all the recipes
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { RecipeCard } from "../../components/Card";
@@ -16,22 +17,16 @@ class Recipes extends Component {
 
   componentDidMount() {
     this.loadRecipes();
-      console.log("authUser?", sessionStorage.getItem('user'));
-      console.log("sessiongStorage: ", sessionStorage.getItem('user'));
-      API.getUser(sessionStorage.getItem('user'))
-      .then(res => {
-        console.log(res.data)
-        if (res.data === null) {
-          API.saveUser({
-            firebaseId: sessionStorage.getItem('user')
-          })
-          .then(localStorage.setItem('user', this.props.authUser.uid));
-        }
-      })
-      .catch(err =>
-        console.log(err)
-      );
-    console.log("componentDidMount: ", sessionStorage.getItem('user'));
+    API.getUser(sessionStorage.getItem('user'))
+    .then(res => {
+      if (res.data === null) {
+        API.saveUser({
+          firebaseId: sessionStorage.getItem('user')
+        })
+        .then(localStorage.setItem('user', this.props.authUser.uid));
+      }
+    })
+    .catch(err => console.log(err));
   }
 
   loadRecipes = () => {
@@ -44,7 +39,6 @@ class Recipes extends Component {
   };
 
   handleSave = (recipeId) => {
-    console.log("hello");
     const user= firebase.auth().currentUser.uid;
     API.saveRecipe(user, recipeId)
       .then(alert("Recipe has been saved to your Pantry!"))

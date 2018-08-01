@@ -1,3 +1,4 @@
+//Mongoose model for directions
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 

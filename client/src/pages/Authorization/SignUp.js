@@ -48,10 +48,6 @@ class SignUpForm extends Component {
         db.doCreateUser(authUser.user.uid, username, email)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
-            console.log(authUser.user.uid);
-            // API.saveUser({
-            //   id: authUser.uid
-            // });
             history.push(routes.RECIPES);
           })
           .catch(error => {
@@ -63,7 +59,6 @@ class SignUpForm extends Component {
       })
       .then(() => {
         sessionStorage.setItem('user', firebase.auth().currentUser.uid)
-        console.log("SignUpUser: ", sessionStorage.getItem('user'));
       })
       .catch(error => {
         this.setState(byPropKey("error", error));

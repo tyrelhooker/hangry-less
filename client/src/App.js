@@ -37,7 +37,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.authUser);
     return (
       <Router> 
           <div className="site">

@@ -1,3 +1,4 @@
+//Adds '/api' to the routes from the api folder
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
