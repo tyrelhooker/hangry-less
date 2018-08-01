@@ -1,10 +1,10 @@
+//Page that renders the recipes saved to a user account
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { SavedRecipeCard } from "../../components/Card";
 import API from "../../utils/API";
 import withAuthorization from "../Authorization/withAuthorization";
-import { db } from "../../firebase";
-
+// import { db } from "../../firebase";
 
 class MyPantry extends Component {
   state = {
@@ -76,5 +76,4 @@ class MyPantry extends Component {
 }
 
 const authCondition = (authUser) => !!authUser;
-
 export default withAuthorization(authCondition)(MyPantry);

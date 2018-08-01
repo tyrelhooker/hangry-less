@@ -1,3 +1,4 @@
+//Page that renders the list of ingredients from all saved recipes
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import API from "../../utils/API";
@@ -5,16 +6,9 @@ import withAuthorization from "../Authorization/withAuthorization";
 import { List } from "../../components/List/List";
 import { ListItem } from "../../components/List/ListItem";
 
-// const user = localStorage.getItem('user');
-// let allRecipes = [];
-
 class MyPantry extends Component {
   state = {
-    users: null,
-    recipes: [],
-    clicked: false,
-    id: "",
-    allRecipes: []
+    recipes: []
   };
 
   componentDidMount() {
@@ -34,13 +28,6 @@ class MyPantry extends Component {
 
   loadRecipes = (recipes) => {
     console.log("hey there")
-    // console.log(this.state.recipeIds);
-    // for (let i=0; i<this.state.recipeIds.length; i++) {
-    //   API.getRecipe(this.state.recipeIds[i])
-    //   .then(res => 
-    //     this.setState({recipes: [...this.state.recipes, res.data]})
-    //   )
-    // }
     return Promise.all(recipes.map((recipe)=>{
       return API.getRecipe(recipe)
     }));
@@ -48,7 +35,6 @@ class MyPantry extends Component {
 
   render() {
     console.log("test", this.state.recipes);
-    // console.log(this.compileList());
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
@@ -59,7 +45,6 @@ class MyPantry extends Component {
                   {recipe.data.ingredients.map(ingredient => (
                     <ListItem 
                       key={ingredient.item}
-                      // title={recipe.title}
                       item={ingredient.item}
                       qty={ingredient.qty}
                     />
@@ -73,7 +58,5 @@ class MyPantry extends Component {
   }
 }
 
-
 const authCondition = (authUser) => !!authUser;
-
 export default withAuthorization(authCondition)(MyPantry);

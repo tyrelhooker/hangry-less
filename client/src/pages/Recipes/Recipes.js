@@ -1,3 +1,4 @@
+//Page that renders all the recipes
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { RecipeCard } from "../../components/Card";
