@@ -39,3 +39,4 @@ favorite recipe(s). You have the option to then save your recipe(s) along with a
  
  * Robin Wieruch (Firebase in React Authentication Tutorial)
  * HelloFresh
+ * Vector Strawberry (https://www.vecteezy.com/food/2672-tasty-vector-strawberries)
