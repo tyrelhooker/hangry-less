@@ -7,7 +7,6 @@ import AuthUserContext from '../Authorization/AuthUserContext';
 import { RECIPES } from '../../constants/routes';
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
-// import "./Recipes.css";
 
 const user = localStorage.getItem('user');
 
