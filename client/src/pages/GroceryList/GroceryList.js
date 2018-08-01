@@ -59,6 +59,7 @@ class MyPantry extends Component {
                   {recipe.data.ingredients.map(ingredient => (
                     <ListItem 
                       key={ingredient.item}
+                      // title={recipe.title}
                       item={ingredient.item}
                       qty={ingredient.qty}
                     />
