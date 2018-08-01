@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Main from "./pages/Main";
 import Recipes from "./pages/Recipes";
 import MyPantry from "./pages/MyPantry";
@@ -15,8 +14,6 @@ import AccountPage from './pages/Authorization/Account';
 
 import * as routes from "./constants/routes";
 import withAuthentication from './pages/Authorization/withAuthentication';
-import AuthUserContext from './pages/Authorization/AuthUserContext';
-
 
 /* 
 The import and export (./withAuthentication) is the higher order component 
@@ -39,7 +36,6 @@ class App extends Component {
   }
 
   render() {
-    // const {authUser} = this.state;
     console.log(this.props.authUser);
     return (
       <Router> 

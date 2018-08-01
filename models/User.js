@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// const ingredientsSchema = require('./ingredients');
-// const directionsSchema = require('./directions');
 
 const userSchema = new Schema({
   firebaseId: {type: String, required: true},

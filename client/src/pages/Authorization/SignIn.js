@@ -90,7 +90,6 @@ class SignInForm extends Component {
         </div>
         { error && <p>{error.message}</p>}
         {/* place an alert here instead of displaying text to the page */}
-    
       </form>
     )
   }

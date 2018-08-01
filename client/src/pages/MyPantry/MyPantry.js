@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { SavedRecipeCard } from "../../components/Card";
-import firebase from 'firebase/app';
 import API from "../../utils/API";
-import AuthUserContext from '../Authorization/AuthUserContext';
-import { RECIPES } from '../../constants/routes';
 import withAuthorization from "../Authorization/withAuthorization";
-import { db } from "../../firebase";
+
 
 class MyPantry extends Component {
   state = {

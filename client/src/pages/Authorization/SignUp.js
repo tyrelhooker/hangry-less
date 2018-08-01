@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { auth, db } from "../../firebase";
-import AuthUserContext from './AuthUserContext';
 import { LoginCard } from "../../components/Login";
 import firebase from "firebase/app";
-// import { auth, db } from '../firebase';
 import * as routes from "../../constants/routes";
 
 const SignUpPage = ({ history }) => (

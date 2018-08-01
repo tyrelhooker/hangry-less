@@ -1,6 +1,5 @@
 // This file uses the Link component of React Router to link the application to different routes.
 import React from "react";
-import { Link } from "react-router-dom";
 import { NavItem } from '../../components/Navbar/NavItem';
 
 // These routes are defined in your constants file.

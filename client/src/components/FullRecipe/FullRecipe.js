@@ -73,7 +73,6 @@ export class FullRecipe extends Component{
           </Col>
         </Row>
       </div>
-
     )
   }
 };
