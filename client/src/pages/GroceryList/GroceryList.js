@@ -10,8 +10,8 @@ import { db } from "../../firebase";
 import { List } from "../../components/List/List";
 import { ListItem } from "../../components/List/ListItem";
 
-const user = localStorage.getItem('user');
-let allRecipes = [];
+// const user = localStorage.getItem('user');
+// let allRecipes = [];
 
 class MyPantry extends Component {
   state = {
@@ -23,8 +23,8 @@ class MyPantry extends Component {
   };
 
   componentDidMount() {
-    console.log("Grocery user?!", user);
-    API.getUser(user)
+    console.log("Grocery user?!", sessionStorage.getItem('user'));
+    API.getUser(sessionStorage.getItem('user'))
     .then(res => {
       return this.loadRecipes(res.data.recipes);
       console.log("hi", res.data.recipes);
@@ -52,14 +52,14 @@ class MyPantry extends Component {
     }));
   };
 
-  compiledList = () => {
-    this.state.recipes.map(recipe => (
-      recipe.data.ingredients.map(ingredient => (
-        allRecipes.push(ingredient)
-      ))
-    ))
-    console.log(allRecipes);
-  }
+  // compiledList = () => {
+  //   this.state.recipes.map(recipe => (
+  //     recipe.data.ingredients.map(ingredient => (
+  //       allRecipes.push(ingredient)
+  //     ))
+  //   ))
+  //   console.log(allRecipes);
+  // }
   
 
   render() {

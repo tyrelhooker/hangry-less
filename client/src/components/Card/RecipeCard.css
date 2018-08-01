@@ -23,3 +23,31 @@
   font-family: 'Oleo Script Swash Caps', cursive;
   /* font-family: 'Montserrat', sans-serif; */
 }
+
+.ingredients {
+  font-family: 'Montserrat', sans-serif;
+  color: #1C421E;
+  text-align: center;
+}
+
+.directions {
+  font-family: 'Montserrat', sans-serif;
+  color: #1C421E;
+  text-align: center;
+  /* border: solid 1px green */
+}
+
+.direction-card {
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title-row {
+  text-align: center;
+}
+
+.ingredients-card {
+  padding: 10px 0px;
+  margin-top: 5px;
+}
+

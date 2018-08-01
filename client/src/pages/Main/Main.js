@@ -27,7 +27,7 @@ class Main extends Component {
                   </div>
                   <Link to={`/Recipes`}>
                     <div className="start-button">
-                      <div className="btn-large center-align">Get Started</div>
+                      <div className="btn-large center-align" style={{background: "#ef5a5c"}}>Get Started</div>
                     </div>
                   </Link>
               </div>

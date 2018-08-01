@@ -7,10 +7,6 @@ import AuthUserContext from '../Authorization/AuthUserContext';
 import { RECIPES } from '../../constants/routes';
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
-// import "./Recipes.css";
-
-const user = localStorage.getItem('user');
-
 
 class MyPantry extends Component {
   state = {
@@ -19,9 +15,12 @@ class MyPantry extends Component {
   };
 
   componentDidMount() {
-    const user = localStorage.getItem('user');
-    console.log("Pantry User?", user)
-    API.getUser(user)
+    console.log("Pantry User?", sessionStorage.getItem('user'));
+    this.getSavedRecipes();
+  }
+
+  getSavedRecipes = () => {
+    API.getUser(sessionStorage.getItem('user'))
     .then(res => {
       return this.loadRecipes(res.data.recipes);
     })
@@ -44,9 +43,10 @@ class MyPantry extends Component {
   handleDelete = (recipeId) => {
     console.log("hello delete");
     console.log("recipe id", recipeId);
-    API.deleteRecipe(user, recipeId)
+    API.deleteRecipe(sessionStorage.getItem('user'), recipeId)
+    .then(res => this.getSavedRecipes())
     .then(alert("Recipe has been removed."))
-    .then(window.location.assign(RECIPES))
+    // .then(window.location.reload())
     .catch(err => console.log(err));
   }
 
@@ -56,42 +56,29 @@ class MyPantry extends Component {
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
-        <h1 className="center-align">This Week's Recipes</h1>
-          <Row >
-            {this.state.recipes.length ? (
-              <div>
-              {this.state.recipes.map(recipe => (
-                <SavedRecipeCard
-                  key={recipe.data._id}  
-                  image={recipe.data.image}
-                  title={recipe.data.title}
-                  dataId={recipe.data._id}
-                  handleDelete={() => this.handleDelete(recipe.data._id)}
-                />
-              ))}
-              </div>
-            ) : (
-              <h1 className="center-align">You haven't saved any recipes yet.</h1>
-            )}            
-        </Row>
+          <h1 className="center-align">This Week's Recipes</h1>
+            <Row >
+              {this.state.recipes.length ? (
+                <div>
+                {this.state.recipes.map(recipe => (
+                  <SavedRecipeCard
+                    key={recipe.data._id}  
+                    image={recipe.data.image}
+                    title={recipe.data.title}
+                    dataId={recipe.data._id}
+                    handleDelete={() => this.handleDelete(recipe.data._id)}
+                  />
+                ))}
+                </div>
+              ) : (
+                <h1 className="center-align">You haven't saved any recipes yet.</h1>
+              )}
+          </Row>
         </Container>
-        { !!users && <UserList  users={users} /> }
       </div>
     );
   }
 }
-
-/* 
-*/
-const UserList = ({ users }) =>
-  <div>
-    <h2>List of Usernames of Users</h2>
-    <p>(Saved on Sign Up in Firebase Database)</p>
-
-    {Object.keys(users).map(key =>
-      <div key={key}>{users[key].username}</div>
-    )}
-  </div>
 
 const authCondition = (authUser) => !!authUser;
 

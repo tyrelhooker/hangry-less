@@ -49,7 +49,8 @@ class SignInForm extends Component {
       //for returning user, once sign in, will direct you to route/page from routes.js
     })
     .then(() => {
-      localStorage.setItem('user', firebase.auth().currentUser.uid)
+      sessionStorage.setItem('user', firebase.auth().currentUser.uid)
+      console.log("SigninUser: ", sessionStorage.getItem('user'));
     })
     .catch(error => {
       this.setState(byPropKey("error", error));
@@ -94,7 +95,6 @@ class SignInForm extends Component {
     )
   }
 }
-
 
 export default withRouter (SignInPage);
 

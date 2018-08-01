@@ -2,28 +2,11 @@ import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
 import { RecipeCard } from "../../components/Card";
 import API from "../../utils/API";
-import AuthUserContext from '../Authorization/AuthUserContext';
 import firebase from 'firebase/app';
 import withAuthorization from "../Authorization/withAuthorization";
-import { db } from "../../firebase";
 import "./Recipes.css";
 
-
 class Recipes extends Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     users: null,
-  //     recipes: [],
-  //     clicked: false,
-  //     id: ""
-  //     // title: "",
-  //     // image: "",
-  //     // ingredients: "",
-  //     // directions: ""
-  //   };
-  // }
   state = {
     users: null,
     recipes: [],
@@ -33,18 +16,14 @@ class Recipes extends Component {
 
   componentDidMount() {
     this.loadRecipes();
-    // db.onceGetUsers().then(snapshot =>
-    //   this.setState(() => ({ users: snapshot.val() }))
-    // );
-      console.log("authUser?", this.props.authUser.uid);
-      localStorage.setItem('user', this.props.authUser.uid);
-      console.log("local storage", localStorage.getItem('user'));
-      API.getUser(this.props.authUser.uid)
+      console.log("authUser?", sessionStorage.getItem('user'));
+      console.log("sessiongStorage: ", sessionStorage.getItem('user'));
+      API.getUser(sessionStorage.getItem('user'))
       .then(res => {
         console.log(res.data)
         if (res.data === null) {
           API.saveUser({
-            firebaseId: this.props.authUser.uid
+            firebaseId: sessionStorage.getItem('user')
           })
           .then(localStorage.setItem('user', this.props.authUser.uid));
         }
@@ -52,7 +31,7 @@ class Recipes extends Component {
       .catch(err =>
         console.log(err)
       );
-    console.log(localStorage.getItem('user'));
+    console.log("componentDidMount: ", sessionStorage.getItem('user'));
   }
 
   loadRecipes = () => {
@@ -91,24 +70,11 @@ class Recipes extends Component {
             ))}
         </Row>
         </Container>
-        { !!users && <UserList  users={users} /> }
       </div>
     );
   }
 }
 
-/* 
-*/
-const UserList = ({ users }) =>
-  <div>
-    <h2>List of Usernames of Users</h2>
-    <p>(Saved on Sign Up in Firebase Database)</p>
-
-    {Object.keys(users).map(key =>
-      <div key={key}>{users[key].username}</div>
-    )}
-  </div>
 
 const authCondition = (authUser) => !!authUser;
-
 export default withAuthorization(authCondition)(Recipes);
