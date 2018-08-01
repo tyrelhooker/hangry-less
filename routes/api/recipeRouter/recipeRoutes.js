@@ -1,3 +1,4 @@
+//Routes involving 'recipes' collection
 const router = require("express").Router();
 const recipeController = require("../../../controller/recipeController");
 

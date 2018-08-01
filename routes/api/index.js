@@ -1,3 +1,4 @@
+//Exports both router folders as 'router'
 const router = require("express").Router();
 const userRoutes = require("./userRouter/userRoutes");
 const recipeRoutes = require("./recipeRouter/recipeRoutes")
