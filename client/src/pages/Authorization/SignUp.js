@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { auth, db } from "../../firebase";
-import AuthUserContext from './AuthUserContext';
 import { LoginCard } from "../../components/Login";
-
-// import { auth, db } from '../firebase';
+import firebase from "firebase/app";
 import * as routes from "../../constants/routes";
 
 const SignUpPage = ({ history }) => (
@@ -44,8 +42,7 @@ class SignUpForm extends Component {
 
     const { history } = this.props;
 
-    auth
-      .doCreateUserWithEmailAndPassword(email, passwordOne)
+    auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         // Create a user in your own accessible Firebase Database too
         db.doCreateUser(authUser.user.uid, username, email)
@@ -63,6 +60,10 @@ class SignUpForm extends Component {
         this.setState(() => ({ ...INITIAL_STATE }));
         history.push(routes.RECIPES);
 
+      })
+      .then(() => {
+        sessionStorage.setItem('user', firebase.auth().currentUser.uid)
+        console.log("SignUpUser: ", sessionStorage.getItem('user'));
       })
       .catch(error => {
         this.setState(byPropKey("error", error));

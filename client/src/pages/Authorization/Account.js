@@ -20,7 +20,8 @@ const AccountPage = () =>
           <h5>{authUser.email}</h5>
           <h4>Forgot Password?</h4>
             <PasswordForgetForm />
-          <PasswordChangeForm />
+          <h4>Change Password?</h4>
+            <PasswordChangeForm />
         </LoginCard>
       )}
     }

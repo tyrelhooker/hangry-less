@@ -3,7 +3,6 @@ This component updates its local state by using onChange handlers in the input f
 */
 
 import React, { Component } from 'react';
-
 import { auth } from '../../firebase';
 
 const byPropKey = (propertyName, value) => () => ({

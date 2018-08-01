@@ -11,7 +11,7 @@ export const SavedRecipeCard = props => (
       <Link to={`/ExpandedRecipe/${props.dataId}`}>
         <img className="recipeImage" src={props.image} alt="" />
       </Link>
-        <div onClick={props.handleDelete} className="btn red">Delete</div>
+        <div onClick={props.handleDelete} className="btn" style={{background: "#ef5a5c"}}>Delete</div>
       </div>
       <div className="card-content">
         <h4 className="recipe-title" data-id={props.dataId}>{props.title}</h4>
