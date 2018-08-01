@@ -4,13 +4,14 @@ import Main from "./pages/Main";
 import Recipes from "./pages/Recipes";
 import MyPantry from "./pages/MyPantry";
 import GroceryList from "./pages/GroceryList";
-import {FullRecipe} from './components/FullRecipe/FullRecipe';
+import { FullRecipe } from './components/FullRecipe/FullRecipe';
 
 import Navigation from "./pages/Authorization/Navigation";
 import SignUpPage from "./pages/Authorization/SignUp";
 import SignInPage from "./pages/Authorization/SignIn";
 import PasswordForgetPage from './pages/Authorization/PasswordForget';
 import AccountPage from './pages/Authorization/Account';
+import { Footer } from "./components/Footer/Footer";
 
 import * as routes from "./constants/routes";
 import withAuthentication from './pages/Authorization/withAuthentication';
@@ -39,20 +40,26 @@ class App extends Component {
     console.log(this.props.authUser);
     return (
       <Router> 
-          <div>
-            <Navigation />           
-            <Switch>
-              <Route exact path={routes.MAIN} component={Main} />
-              <Route exact path={routes.RECIPES} component={(props) => <Recipes authUser= {this.props.authUser}/>}/> 
-              <Route exact path={routes.MY_PANTRY}component={MyPantry} />
-              <Route exact path={routes.GROCERY_LIST}component={GroceryList} />
-              <Route exact path={routes.SIGN_UP}component={() => <SignUpPage />} />
-              <Route exact path={routes.SIGN_IN}component={() => <SignInPage />} />
-              <Route exact path={routes.PASSWORD_FORGET}component={() => <PasswordForgetPage />} />
-              <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
-              <Route exact path="/ExpandedRecipe/:id" component={FullRecipe} />
-            </Switch>
-
+          <div className="site">
+            <div className="site-content">
+              <div className="header">
+                <Navigation /> 
+              </div>
+              <div className="main">
+                <Switch>
+                  <Route exact path={routes.MAIN} component={Main} />
+                  <Route exact path={routes.RECIPES} component={(props) => <Recipes authUser= {this.props.authUser}/>}/> 
+                  <Route exact path={routes.MY_PANTRY}component={MyPantry} />
+                  <Route exact path={routes.GROCERY_LIST}component={GroceryList} />
+                  <Route exact path={routes.SIGN_UP}component={() => <SignUpPage />} />
+                  <Route exact path={routes.SIGN_IN}component={() => <SignInPage />} />
+                  <Route exact path={routes.PASSWORD_FORGET}component={() => <PasswordForgetPage />} />
+                  <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
+                  <Route exact path="/ExpandedRecipe/:id" component={FullRecipe} />
+                </Switch>
+              </div>
+            </div>
+            <Footer />
           </div>
       </Router>
     )
