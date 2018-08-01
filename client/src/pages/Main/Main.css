@@ -21,10 +21,25 @@
   color: #1C421E;
   /* color: #265728; */
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Open Sans', sans-serif; */
   font-size: 18px;
 }
 
 .specialFont {
   font-family: 'Oleo Script Swash Caps', cursive;
 }
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1 0 auto;
+  /* border: solid purple 1px; */
+}
+
+.page-footer {
+  margin: 0;
+}
+
