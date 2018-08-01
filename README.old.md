@@ -19,6 +19,7 @@ favorite recipe(s). You have the option to then save your recipe(s) along with a
 
 ## Built With
  * React
+ * Mongoose
  * Express
  * Node JS
  * Heroku
