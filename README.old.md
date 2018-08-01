@@ -7,6 +7,7 @@ Do you feel exhausted after meal planning and grocery shopping? Are questions su
 ##Deployment
 
 Visit our site at one of the following links:
+
 *Heroku link  - https://hangry-less.herokuapp.com/
 *GitHub link -  https://github.com/tyrelhooker/project3
 
@@ -27,11 +28,13 @@ favorite recipe(s). You have the option to then save your recipe(s) along with a
  
 
  ##Project Contributors
+ 
  *Jamie Barbuto
  *TJ Hooker
  *Marcus Robers
 
 
  ##Acknowledgments
+ 
  *Robin Wieruch (Firebase in React Authentication Tutorial)
  *HelloFresh
