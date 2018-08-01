@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
-import { RecipeCard } from "../../components/Card";
-import { FullRecipe } from "../../components/FullRecipe/FullRecipe";
-import firebase from 'firebase/app';
 import API from "../../utils/API";
-import AuthUserContext from '../Authorization/AuthUserContext';
 import withAuthorization from "../Authorization/withAuthorization";
-import { db } from "../../firebase";
 import { List } from "../../components/List/List";
 import { ListItem } from "../../components/List/ListItem";
 
@@ -27,7 +22,6 @@ class MyPantry extends Component {
     API.getUser(sessionStorage.getItem('user'))
     .then(res => {
       return this.loadRecipes(res.data.recipes);
-      console.log("hi", res.data.recipes);
     })
     .then(recipes=>{
       console.log("after load recipes", recipes);
@@ -55,7 +49,6 @@ class MyPantry extends Component {
   render() {
     console.log("test", this.state.recipes);
     // console.log(this.compileList());
-    const { users } = this.state;
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
@@ -74,7 +67,6 @@ class MyPantry extends Component {
               ))}
           </Row>
         </Container>
-        { !!users && <UserList  users={users} /> }
       </div>
     );
   }

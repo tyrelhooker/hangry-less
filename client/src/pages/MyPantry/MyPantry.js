@@ -49,7 +49,6 @@ class MyPantry extends Component {
 
   render() {
     console.log("test", this.state.recipes);
-    const { users } = this.state;
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">

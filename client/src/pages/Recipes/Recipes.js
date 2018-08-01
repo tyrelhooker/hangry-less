@@ -53,7 +53,6 @@ class Recipes extends Component {
   };
 
   render() {
-    const { users } = this.state;
     return (
       <div>
         <Container fluid uniqueClassName="recipeContainer">
