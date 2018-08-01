@@ -42,8 +42,6 @@ class MyPantry extends Component {
     console.log("recipe id", recipeId);
     API.deleteRecipe(sessionStorage.getItem('user'), recipeId)
     .then(res => this.getSavedRecipes())
-    .then(alert("Recipe has been removed."))
-    // .then(window.location.reload())
     .catch(err => console.log(err));
   }
 
