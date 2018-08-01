@@ -1,6 +1,5 @@
 // This file uses the Link component of React Router to link the application to different routes.
 import React from "react";
-import { Link } from "react-router-dom";
 import { NavItem } from '../../components/Navbar/NavItem';
 
 // These routes are defined in your constants file.
@@ -26,7 +25,7 @@ const Navigation = () =>
 const NavigationAuth = (authUser) => (
   <div className="navbar-fixed">
     <nav>
-      <div className="nav-wrapper green">
+      <div className="nav-wrapper green ">
         <a href= {routes.MAIN} className="brand-logo pulse" style={{ left: "0%", transform: "translateX(0%)"}}><img src="./images/logo13.png" className="responsive-img" alt=""/></a>
         <ul className="right">
           <NavItem to={routes.RECIPES} name="Recipes" />

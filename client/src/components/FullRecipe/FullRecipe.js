@@ -1,11 +1,9 @@
 import React, {Component} from "react";
+import { Link } from "react-router-dom";
 import API from "../../utils/API";
-import {Col} from "../../components/Grid";
+import { Row, Col } from "../../components/Grid";
 import { IngredientItem } from "./IngredientItem";
 import { DirectionItem } from "./DirectionItem";
-import firebase from 'firebase/app';
-
-// console.log(firebase.auth().currentUser);
 
 export class FullRecipe extends Component{
   state ={
@@ -19,28 +17,8 @@ export class FullRecipe extends Component{
   }
 
   componentDidMount() {
-    // setTimeout(this.checkForSaved(),3000);
     this.loadRecipe();
   };
-
-  // checkForSaved = () => {
-  //   const user= localStorage.getItem('user');
-  //   console.log(user);
-  //   API.getUser(user)
-  //   .then(res => 
-  //     // this.setState({ savedRecipes: res.data.recipes }))
-  //     console.log(res.data.recipes))
-  //   .then(this.loopForSaved())
-  //   .catch(err => console.log(err));
-  // }
-
-  // loopForSaved = () => {
-  //   for (let i=0; i<this.state.savedRecipes; i++) {
-  //     if (this.state.savedRecipes[i] === this.props.match.params.id) {
-  //       this.setState.saved = true
-  //     }
-  //   }
-  // }
 
   loadRecipe = () => {
     console.log(this.state.id);
@@ -60,35 +38,41 @@ export class FullRecipe extends Component{
   render(){
     return (
       <div className="container">
-        <img className="responsive-img" src={this.state.image} alt="" />
-        <h1>{this.state.title}</h1>
-        <Col size="m6">
-          <div className="ingredients">
-            <h3>Ingredients:</h3>
-              {this.state.ingredients.map(ingredient => (
-                <IngredientItem
-                  key={ingredient._id}
-                  item={ingredient.item}
-                  qty={ingredient.qty}
-                />
-              ))}
-          </div>
-        </Col>
-        <Col size="m6">
-          <div className="Driections">
-            <h3>Directions:</h3>
-              {this.state.directions.map(direction => (
-                  <DirectionItem
-                    key={direction._id}
-                    step={direction.step}
-                    info={direction.info}
-                  />
-              ))}
-          </div>
-        </Col>
-
+        <Link to ={`/Recipes`}>
+          <img className="responsive-img recipeImage recipe-image" src={this.state.image} alt="" />
+        </Link>
+        <div className="title-row">
+          <h1 className="recipe-title">{this.state.title}</h1>
+        </div>
+        <Row> 
+          <Col size="s12 m6">
+            <div className="ingredients">
+              <h3>Ingredients</h3>
+                <div className="card ingredients-card">
+                  {this.state.ingredients.map(ingredient => (
+                    <IngredientItem
+                      key={ingredient._id}
+                      item={ingredient.item}
+                      qty={ingredient.qty}
+                    />
+                  ))}
+                </div>
+            </div>
+          </Col>
+          <Col size="s12 m6" className="directionsBox">
+            <div className="directions">
+              <h3>Directions</h3>
+                {this.state.directions.map(direction => (
+                    <DirectionItem
+                      key={direction._id}
+                      step={direction.step}
+                      info={direction.info}
+                    />
+                ))}
+            </div>
+          </Col>
+        </Row>
       </div>
-
     )
   }
 };
