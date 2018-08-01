@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
-import { RecipeCard } from "../../components/Card";
+import { SavedRecipeCard } from "../../components/Card";
 import firebase from 'firebase/app';
 import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
-
+import { RECIPES } from '../../constants/routes';
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
 // import "./Recipes.css";
@@ -14,13 +14,12 @@ const user = localStorage.getItem('user');
 
 class MyPantry extends Component {
   state = {
-    users: null,
     recipes: [],
-    clicked: false,
     id: ""
   };
 
   componentDidMount() {
+    const user = localStorage.getItem('user');
     console.log("Pantry User?", user)
     API.getUser(user)
     .then(res => {
@@ -42,6 +41,15 @@ class MyPantry extends Component {
     }));
   };
 
+  handleDelete = (recipeId) => {
+    console.log("hello delete");
+    console.log("recipe id", recipeId);
+    API.deleteRecipe(user, recipeId)
+    .then(alert("Recipe has been removed."))
+    .then(window.location.assign(RECIPES))
+    .catch(err => console.log(err));
+  }
+
   render() {
     console.log("test", this.state.recipes);
     const { users } = this.state;
@@ -50,14 +58,21 @@ class MyPantry extends Component {
         <Container fluid uniqueClassName="recipeContainer">
         <h1 className="center-align">This Week's Recipes</h1>
           <Row >
-            {this.state.recipes.map(recipe => (
-              <RecipeCard
-                key={recipe.data._id}  
-                image={recipe.data.image}
-                title={recipe.data.title}
-                dataId={recipe.data._id}
-              />
-            ))}
+            {this.state.recipes.length ? (
+              <div>
+              {this.state.recipes.map(recipe => (
+                <SavedRecipeCard
+                  key={recipe.data._id}  
+                  image={recipe.data.image}
+                  title={recipe.data.title}
+                  dataId={recipe.data._id}
+                  handleDelete={() => this.handleDelete(recipe.data._id)}
+                />
+              ))}
+              </div>
+            ) : (
+              <h1 className="center-align">You haven't saved any recipes yet.</h1>
+            )}            
         </Row>
         </Container>
         { !!users && <UserList  users={users} /> }

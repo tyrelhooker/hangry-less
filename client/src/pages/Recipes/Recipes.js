@@ -3,7 +3,7 @@ import { Row, Container } from "../../components/Grid";
 import { RecipeCard } from "../../components/Card";
 import API from "../../utils/API";
 import AuthUserContext from '../Authorization/AuthUserContext';
-
+import firebase from 'firebase/app';
 import withAuthorization from "../Authorization/withAuthorization";
 import { db } from "../../firebase";
 import "./Recipes.css";
@@ -64,6 +64,15 @@ class Recipes extends Component {
       .catch(err => console.log(err));
   };
 
+  handleSave = (recipeId) => {
+    console.log("hello");
+    const user= firebase.auth().currentUser.uid;
+    API.saveRecipe(user, recipeId)
+      .then(alert("Recipe has been saved to your Pantry!"))
+      .catch(err => console.log(err));
+    this.setState.saved = true;
+  };
+
   render() {
     const { users } = this.state;
     return (
@@ -77,6 +86,7 @@ class Recipes extends Component {
                 image={recipe.image}
                 title={recipe.title}
                 dataId={recipe._id}
+                handleSave={() => this.handleSave(recipe._id)}
               />
             ))}
         </Row>
