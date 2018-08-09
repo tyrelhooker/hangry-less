@@ -2,7 +2,7 @@
 
 ![GitHub Logo](http://4.bp.blogspot.com/-tIQBhqNrqGg/UTDTTnivbBI/AAAAAAAACJE/gfTt1tAT9zY/s1600/freaking+hungry.gif)
 
-Do you feel exhausted after meal planning and grocery shopping? Are questions such as "*what do you want to eat tonight?*" or "*we're having that again?*" causing chronic hangry-ness and relationship discord? It could be decision fatigue. We'll never fear, we've designed the perfect meal planning application to eliminate your hangry pains and revitalize your dinner plan rendezvous!
+Do you feel exhausted after meal planning and grocery shopping? Are questions such as "*what do you want to eat tonight?*" or "*we're having that again?*" causing chronic hangry-ness and relationship discord? It could be decision fatigue. Well never fear, we've designed the perfect meal planning application to eliminate your hangry pains and revitalize your dinner plan rendezvous!
 
 ## Deployment
 
